@@ -3,58 +3,65 @@
   -------------------------------- */
 /* VARIABLES */
 :root {
-  --primary-color: #302AE6;
-  --secondary-color: #536390;
-  --font-color: #424242;
-  --bg-color: #fff;
-  --heading-color: #292922; }
+  --bg-color: white;
+  --heading-color: #292922;
+  --burger-color: #292922;
+  --nav-color: #4ECDC4;
+  --slider: #292922; }
 
 [data-theme="dark"] {
-  --primary-color: #9A97F3;
-  --secondary-color: #818cab;
-  --font-color: #e1e1ff;
-  --bg-color: #161625;
-  --heading-color: #818cab; }
+  --bg-color: #292F36;
+  --heading-color: #FAF9ED;
+  --nav-color: #0C747A;
+  --slider: white;
+  --burger-color: white; }
 
 body {
   font-family: "Inter", sans-serif;
   max-width: 100%;
   margin: 0 auto;
-  background-color: var(--bg-color);
-  color: var(--font-color); }
+  background-color: var(--bg-color); }
+
+header {
+  display: flex;
+  justify-content: flex-end; }
 
 h1 {
   font-size: 2rem;
-  margin-bottom: 1vh;
-  color: var(--secondary-color); }
+  color: var(--heading-color); }
 
 p {
   font-size: 1.1rem;
   line-height: 1.6rem;
-  color: var(--primary-color); }
+  color: var(--heading-color); }
 
 section {
   max-width: 60%;
   margin: 0 auto; }
 
-.theme-switch-wrapper {
+/*///////////// Light mode / dark mode toggle */
+.toggle-container {
   display: flex;
-  align-items: center; }
-  .theme-switch-wrapper em {
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  margin: 20px; }
+  .toggle-container em {
     margin-left: 10px;
     font-size: 1rem; }
 
-.theme-switch {
+.toggle {
   display: inline-block;
   height: 34px;
   position: relative;
   width: 60px; }
 
-.theme-switch input {
+.toggle input {
   display: none; }
 
 .slider {
-  background-color: #ccc;
+  background: transparent;
+  border: 2px solid var(--slider);
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -64,17 +71,17 @@ section {
   transition: .4s; }
 
 .slider:before {
-  background-color: #fff;
-  bottom: 4px;
+  background-color: var(--slider);
+  bottom: 3px;
   content: "";
-  height: 26px;
+  height: 24px;
   left: 4px;
   position: absolute;
   transition: .4s;
-  width: 26px; }
+  width: 24px; }
 
 input:checked + .slider {
-  background-color: #66bb6a; }
+  background: transparent; }
 
 input:checked + .slider:before {
   transform: translateX(26px); }
@@ -85,26 +92,64 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%; }
 
-/* LAYOUT */
-/* {position:absolute;} */
-/* {position:relative;} */
-/* {float:left;} */
-/* {float:right;} */
-/* {overflow:hidden;} */
-/* {display:block;} */
-/* {display:inline;} */
-/* {display:none;} */
-/* {margin:0} */
-/* {padding:0;} */
-/* {width:100%;} */
-/* COLOR */
-/* {background-color: #fff;} */
-/* {background-color: transparent;} */
-/* {border: 1px solid #000;} */
-/* {border: none;} */
-/* {color: #000;} */
-/* {border-radius: 0px;} */
-/* {transition: all 0.3s ease-in-out;} */
+/*///////////////// Navigation menu */
+.header {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--nav-color);
+  z-index: 3;
+  left: -1500px;
+  transition: 1s; }
+
+ul {
+  list-style-type: none; }
+  ul li {
+    color: white;
+    font-size: 30px;
+    padding-bottom: 50px;
+    font-family: 'Khula', sans-serif;
+    text-transform: uppercase; }
+
+.header-active {
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  transition: 1s; }
+
+/*///////////////// Burger */
+.burger-menu_container {
+  position: fixed;
+  z-index: 4;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  .burger-menu_container .burger-menu {
+    cursor: pointer;
+    z-index: 4;
+    margin-left: 20px; }
+    .burger-menu_container .burger-menu .bar {
+      width: 35px;
+      height: 5px;
+      margin: 6px 0;
+      transition: 0.4s;
+      background-color: var(--burger-color); }
+
+.active .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+  background-color: white; }
+.active .bar2 {
+  opacity: 0; }
+.active .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+  background-color: white; }
+
 /* BASE
 	-------------------------------- */
 /* HEADER
@@ -113,10 +158,6 @@ input:checked + .slider:before {
 	-------------------------------- */
 /* CONTENT
 	-------------------------------- */
-/* LAYOUT */
-/* BASIC ELEMENTS */
-/* HEADINGS */
-/* FORMS & BUTTONS */
 /* … */
 
 /*# sourceMappingURL=styles.css.map */
