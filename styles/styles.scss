@@ -35,7 +35,6 @@ section {
     height:100%;
     width:100%;
     padding: 60px;
-    padding-left: 120px;
     box-sizing:border-box;
 }
 
@@ -57,6 +56,7 @@ section {
   }
 
   /*///////////// Title */
+
 .intro {
   display: flex;
   flex-direction: column;
@@ -70,10 +70,92 @@ section {
       font-size: 120px;
       margin: 5px;
       line-height: 0.6;
+      animation-name: title-appear;
+      animation-duration: 2s;
     }
   }
 }
 
+@keyframes title-appear {
+  0%   {
+    margin: 400px 0;
+    opacity: 0;
+  }
+  50%   {
+    opacity: 0.5;
+  }
+  100% {
+    margin: 5px 0;
+    opacity: 1;
+  }
+}
+
+/*///////////////// scroll arrow */
+  .scroll {
+    position: absolute;
+    bottom: 50px;
+    font-family: 'Lora', serif;
+    height: 100px;
+    animation-name: slide-appear;
+
+    h2 {
+      font-size: 18px;
+      text-orientation: sideways;
+      writing-mode: vertical-rl;
+      color: var(--heading-color);
+      margin: 0 0 20px 0;
+      animation: slide 1s ease-in-out infinite;
+    }
+  }
+  .scroll-arrow {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .arrow {
+      border: solid var(--heading-color);
+      border-width: 0 1px 1px 0;
+      display: inline-block;
+      padding: 3px;
+      color: var(--heading-color);
+      height: 5px;
+      width: 5px;
+  }
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  .line {
+    width: 2px;
+    height: 20px;
+    background: var(--heading-color);
+    margin: 0 auto;
+  }
+
+  @keyframes slide {
+    0% {
+      margin-bottom: 20px;
+    }
+    50% {
+      margin-bottom: 30px;
+    }
+    100% {
+      margin-bottom: 20px;
+    }
+  }
+
+  @keyframes slide-appear {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      margin-bottom: 1;
+    }
+  }
 
   /*///////////// Light mode / dark mode toggle */
 
@@ -215,8 +297,51 @@ ul {
   }
 }
 
+/*///////////////// Section experience */
+.experience {
+  flex-direction: column;
+}
 
+.experience__job {
+  display: flex;
+  flex-direction: row;
+  .job-date {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .job-circle-line {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: flex-start;
+    align-items: center;
+    .circle-outer {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 2px solid var(--heading-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .circle-inner {
+         background-color: var(--slider);
+         position: absolute;
+         border-radius: 50%;
+         height: 20px;
+         width: 20px;
 
+      }
+    }
+    .circle-line {
+      background-color: var(--heading-color);
+      width: 4px;
+      height: 200px;
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+    }
+
+  }
+}
 
 /* BASE
 	-------------------------------- */
