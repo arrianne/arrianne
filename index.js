@@ -54,7 +54,13 @@ $(document).ready(function() {
     });
 
 
+    // experience hover effect
 
+    $(".experience__job").hover(function(){
+      $(this).find(".circle-inner").css("opacity", 1);
+      }, function(){
+      $(this).find(".circle-inner").css("opacity", 0);
+    });
 
 
 });
