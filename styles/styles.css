@@ -7,14 +7,17 @@
   --burger-color: #292922;
   --nav-color: #4ECDC4;
   --slider: #292922;
-  --paragraph-color: pink; }
+  --paragraph-primary: #292922;
+  --paragraph-secondary: #4ECDC4; }
 
 [data-theme="dark"] {
   --bg-color: #292F36;
   --heading-color: #FAF9ED;
   --nav-color: #0C747A;
   --slider: white;
-  --burger-color: white; }
+  --burger-color: white;
+  --paragraph-primary: #faf9ed59;
+  --paragraph-secondary: white; }
 
 body,
 html {
@@ -28,7 +31,7 @@ section {
   background-color: var(--bg-color);
   display: flex;
   height: 100%;
-  width: 80%;
+  width: 100%;
   padding: 60px;
   box-sizing: border-box;
   margin: 0 auto; }
@@ -44,7 +47,7 @@ h1 {
 p {
   font-size: 14px;
   line-height: 1.6rem;
-  color: var(--heading-color); }
+  color: var(--paragraph-primary); }
 
 /*/
 //////////// Title */
@@ -250,14 +253,17 @@ ul {
 
 .experience__job {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  position: relative; }
   .experience__job .job-date {
     display: flex;
     justify-content: flex-start;
     min-width: 10%;
     font-size: 20px;
     font-family: "Khula", sans-serif;
-    font-weight: 600; }
+    font-weight: 600;
+    position: absolute;
+    color: var(--paragraph-primary); }
   .experience__job .job-circle-line {
     display: flex;
     flex-direction: column;
@@ -273,12 +279,14 @@ ul {
       align-items: center;
       justify-content: center; }
       .experience__job .job-circle-line .circle-outer .circle-inner {
-        background-color: var(--slider);
+        background-color: var(--nav-color);
         opacity: 0;
         position: absolute;
         border-radius: 50%;
         height: 20px;
         width: 20px; }
+    .experience__job .job-circle-line .job-about p {
+      color: var(--paragraph-secondary); }
     .experience__job .job-circle-line .circle-line {
       background-color: var(--heading-color);
       width: 1px;

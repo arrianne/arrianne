@@ -58,8 +58,12 @@ $(document).ready(function() {
 
     $(".experience__job").hover(function(){
       $(this).find(".circle-inner").css("opacity", 1);
+      $(this).find(".job-date").animate({left:'-7px'},200);
+      $(this).find("p").css("color", "var(--paragraph-secondary)");
       }, function(){
       $(this).find(".circle-inner").css("opacity", 0);
+      $(this).find(".job-date").animate({left:'0px'},200);
+      $(this).find("p").css("color", "var(--paragraph-primary)");
     });
 
 
