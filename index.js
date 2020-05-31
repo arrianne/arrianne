@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  console.log("i'm working");
+
   const toggleSwitch = document.querySelector('.toggle input[type="checkbox"]');
   const currentTheme = localStorage.getItem('theme');
 
@@ -66,9 +66,27 @@ $(document).ready(function() {
       $(this).find("p").css("color", "var(--paragraph-primary)");
     });
 
-    var path = document.querySelector(".st0");
-var total = path.getTotalLength();
-console.log(total);
+
+    // SVG animate when scrolled to
+    $(window).scroll(function() {
+        var top_of_element = $(".retina").offset().top;
+        var bottom_of_element = $(".retina").offset().top + $(".retina").outerHeight();
+        var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+        var top_of_screen = $(window).scrollTop();
+
+        if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
+            // the element is visible, do something
+            $(".st0").attr("class", "st0 animate");
+        } else {
+            // the element is not visible, do something else
+            $(".st0").attr("class", "st0");
+        }
+    });
+
+
+
+
+
 
 
 });

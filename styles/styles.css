@@ -247,11 +247,18 @@ ul {
   transform: rotate(45deg) translate(-8px, -8px);
   background-color: white; }
 
-.retina {
-  width: 1000px; }
+.ophthalmic-imaging {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .ophthalmic-imaging .retina {
+    width: 50%; }
+  .ophthalmic-imaging p {
+    width: 50%;
+    color: var(--heading-color); }
 
-.st0 {
-  fill: transparent;
+.animate {
+  fill: var(--bg-color);
   stroke-width: 0.5;
   stroke: var(--heading-color);
   stroke-dasharray: 2600;
