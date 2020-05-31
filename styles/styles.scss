@@ -35,6 +35,7 @@ html {
 section {
   background-color: var(--bg-color);
   display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
   padding: 60px;
@@ -312,6 +313,31 @@ ul {
     background-color: white;
   }
 }
+
+//////////////// about me */
+
+.retina {
+  width: 1000px;
+  // stroke: purple;
+  // stroke-dasharray: 20;
+
+}
+.st0 {
+  fill: transparent;
+  stroke-width: 0.5;
+  stroke: var(--heading-color);
+  stroke-dasharray: 2600;
+  stroke-dashoffset: 2600;
+  animation: retina 20s forwards linear;
+}
+@keyframes retina {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
 /*/
 //////////////// Section experience */
 
