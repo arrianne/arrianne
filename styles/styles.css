@@ -25,25 +25,28 @@ html {
   height: 100%;
   width: 100%;
   padding: 0;
-  font-family: "Khula", sans-serif; }
+  font-family: "Mukta", sans-serif; }
 
 section {
   background-color: var(--bg-color);
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  padding: 60px;
-  box-sizing: border-box;
-  margin: 0 auto; }
+  height: 100vh;
+  padding: 100px;
+  margin: 0 auto;
+  flex-direction: column; }
 
 header {
   display: flex;
   justify-content: flex-end; }
 
 h1 {
-  font-size: 2rem;
+  font-size: 8rem;
+  margin: 5px;
+  line-height: 0.6;
   color: var(--heading-color); }
+
+h2 {
+  font-size: 4rem; }
 
 p {
   font-size: 14px;
@@ -55,16 +58,18 @@ p {
 .intro {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 120px; }
+  .intro .lamp {
+    margin-top: 100px;
+    width: auto;
+    height: auto; }
   .intro .title {
-    display: flex;
-    justify-content: center;
-    flex-direction: column; }
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
     .intro .title h1 {
-      font-size: 120px;
-      margin: 5px;
-      line-height: 0.6;
       animation-name: title-appear;
       animation-duration: 2s; }
 
@@ -247,19 +252,25 @@ ul {
   transform: rotate(45deg) translate(-8px, -8px);
   background-color: white; }
 
-.ophthalmic-imaging {
+.about-me {
   display: flex;
-  flex-direction: row;
-  align-items: center; }
-  .ophthalmic-imaging .retina {
-    width: 50%; }
-  .ophthalmic-imaging p {
-    width: 50%;
-    color: var(--heading-color); }
+  flex-direction: column; }
+  .about-me .about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+
+.retina {
+  width: 30%; }
+
+p {
+  width: 50%;
+  color: var(--heading-color); }
 
 .animate {
   fill: var(--bg-color);
-  stroke-width: 0.5;
+  stroke-width: 0.2;
   stroke: var(--heading-color);
   stroke-dasharray: 2600;
   stroke-dashoffset: 2600;
@@ -272,6 +283,8 @@ ul {
 //////////////// Section experience */
 .experience {
   flex-direction: column; }
+  .experience p {
+    width: 100%; }
 
 .experience__job {
   display: flex;
@@ -282,7 +295,7 @@ ul {
     justify-content: flex-start;
     min-width: 10%;
     font-size: 20px;
-    font-family: "Khula", sans-serif;
+    font-family: "Mukta", sans-serif;
     font-weight: 600;
     position: absolute;
     color: var(--paragraph-primary); }

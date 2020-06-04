@@ -20,7 +20,8 @@
   --paragraph-primary: #faf9ed59;
   --paragraph-secondary: white;
 }
-$font-stack: 'Khula', sans-serif;
+$font-stack: 'Mukta', sans-serif;
+
 
 body,
 html {
@@ -35,12 +36,10 @@ html {
 section {
   background-color: var(--bg-color);
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  padding: 60px;
-  box-sizing: border-box;
+  height: 100vh;
+  padding: 100px;
   margin: 0 auto;
+  flex-direction: column;
 }
 
 header {
@@ -49,8 +48,14 @@ header {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 8rem;
+  margin: 5px;
+  line-height: 0.6;
   color: var(--heading-color);
+}
+
+h2 {
+  font-size: 4rem;
 }
 
 p {
@@ -64,18 +69,30 @@ p {
 .intro {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
+  margin-top: 120px;
+
+.lamp {
+
+
+  margin-top: 100px;
+  width: auto;
+  height: auto;
+
+}
   .title {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // display: flex;
+    // justify-content: center;
+    // flex-direction: column;
+    // margin-bottom: 100px;
+
 
     h1 {
-      font-size: 120px;
-      margin: 5px;
-      line-height: 0.6;
       animation-name: title-appear;
       animation-duration: 2s;
     }
@@ -316,20 +333,26 @@ ul {
 
 //////////////// about me */
 
-.ophthalmic-imaging {
+.about-me {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  .retina {
-    width: 50%;
+  flex-direction: column;
+  .about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
-
-   p {
-     width: 50%;
-     color: var(--heading-color);
-   }
 }
+
+
+.retina {
+  width: 30%;
+}
+
+ p {
+   width: 50%;
+   color: var(--heading-color);
+ }
 
 
 .st0 {
@@ -338,7 +361,7 @@ ul {
 
 .animate {
   fill: var(--bg-color);
-  stroke-width: 0.5;
+  stroke-width: 0.2;
   stroke: var(--heading-color);
   stroke-dasharray: 2600;
   stroke-dashoffset: 2600;
@@ -358,6 +381,9 @@ ul {
 
 .experience {
   flex-direction: column;
+  p {
+    width: 100%;
+  }
 }
 
 .experience__job {
