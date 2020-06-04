@@ -81,12 +81,30 @@ $(document).ready(function() {
             // the element is not visible, do something else
             $(".st0").attr("class", "st0");
         }
+
+        // Skill scrolling section
+
+
+
     });
 
 
+    $(window).scroll(function() {
+          if(elementScrolled('.css')) {
+          console.log('Event Fired');
+            $('.css').stop().animate({height: "90%"},400,"swing");
+            $('.html').stop().animate({height: "60%"},400,"swing");
+            $('.javascript').stop().animate({height: "80%"},400,"swing");
+            $('.adobe').stop().animate({height: "40%"},400,"swing");
 
+          } else {
+            $('.css').stop().animate({height: "0%"},400,"swing");
+            $('.html').stop().animate({height: "0%"},400,"swing");
+            $('.css').stop().animate({height: "0%"},400,"swing");
+            $('.html').stop().animate({height: "0%"},400,"swing");
 
-
+          }
+      });
 
 
 });

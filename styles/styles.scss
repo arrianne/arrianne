@@ -30,11 +30,12 @@ html {
   width: 100%;
   padding: 0;
   font-family: $font-stack;
+  background-color: var(--bg-color);
 
 }
 
 section {
-  background-color: var(--bg-color);
+
   display: flex;
   height: 100vh;
   padding: 100px;
@@ -56,6 +57,7 @@ h1 {
 
 h2 {
   font-size: 4rem;
+  color: var(--heading-color);
 }
 
 p {
@@ -63,6 +65,13 @@ p {
   line-height: 1.6rem;
   color: var(--paragraph-primary);
 }
+
+.line-break {
+  width: 100px;
+  height: 10px;
+  background-color: var(--heading-color);
+}
+
 /*/
 //////////// Title */
 
@@ -346,7 +355,7 @@ ul {
 
 
 .retina {
-  width: 30%;
+  width: 25%;
 }
 
  p {
@@ -361,7 +370,7 @@ ul {
 
 .animate {
   fill: var(--bg-color);
-  stroke-width: 0.2;
+  stroke-width: 0.5;
   stroke: var(--heading-color);
   stroke-dasharray: 2600;
   stroke-dashoffset: 2600;
@@ -374,7 +383,90 @@ ul {
   }
 }
 
+///////////////// skills
 
+.title-box {
+  height: 500px;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+}
+
+.care {
+      padding: 30px;
+      max-width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .icon {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+
+    }
+
+    //////////////// skills
+
+
+
+    .about-descriptions {
+      display: flex;
+      justify-content: space-between;
+      align-self: center;
+      width: 60%;
+      height: 50px;
+      margin-top: 20px;
+      border: 0;
+      .skills-description{
+        background: none;
+        display: flex;
+        width: 40px;
+        height: 100px;
+        margin: 0 20px;
+        .skill {
+          align-self: flex-start;
+          text-orientation: sideways;
+          writing-mode: vertical-rl;
+          color: blue;
+          font-family: 'Lora', serif;
+        }
+      }
+    }
+
+    .about-container {
+      display: flex;
+      justify-content: space-between;
+      align-self: center;
+      width: 60%;
+      height: 500px;
+      margin-top: 40px;
+      align-items: center;
+      border: 0;
+
+      .skills-list {
+        display: flex;
+        align-items: flex-end;
+        width: 40px;
+        height: 500px;
+        margin: 0 20px;
+        border: 2px solid grey;
+        z-index: 3;
+        .skill {
+          width: 100%;
+          background: blue;
+        }
+        .skills-description{
+          display: flex;
+          width: 40px;
+          height: 100px;
+          margin: 0 20px;
+          background: #bc9ec1;
+        }
+      }
+    }
 
 /*/
 //////////////// Section experience */
