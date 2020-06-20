@@ -53,6 +53,10 @@ $(document).ready(function() {
       });
     });
 
+    $('.skills').scroll(function() {
+        console.log('this is working');
+      });
+
 
     // experience hover effect
 
@@ -67,44 +71,36 @@ $(document).ready(function() {
     });
 
 
-    // SVG animate when scrolled to
-    $(window).scroll(function() {
-        var top_of_element = $(".retina").offset().top;
-        var bottom_of_element = $(".retina").offset().top + $(".retina").outerHeight();
-        var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
-        var top_of_screen = $(window).scrollTop();
 
-        if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
-            // the element is visible, do something
-            $(".st0").attr("class", "st0 animate");
-        } else {
-            // the element is not visible, do something else
-            $(".st0").attr("class", "st0");
+    
+
+    $(window).scroll(function(){
+        // Function used to detect if the element is scrolled into view
+        function elementScrolled(elem)
+        {
+            var docViewTop = $(window).scrollTop();
+            var docViewBottom = docViewTop + $(window).height();
+            var elemTop = $(elem).offset().top;
+            return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
         }
 
-        // Skill scrolling section
+        if (elementScrolled('.retina')) {
+            $(".st0").attr("class", "st0 animate");
 
-
-
-    });
-
-
-    $(window).scroll(function() {
-          if(elementScrolled('.css')) {
-          console.log('Event Fired');
-            $('.css').stop().animate({height: "90%"},400,"swing");
-            $('.html').stop().animate({height: "60%"},400,"swing");
+        } else if (elementScrolled('.skill')) {
+            $('.html').stop().animate({height: "20%"},400,"swing");
+            $('.css').stop().animate({height: "10%"},400,"swing");
             $('.javascript').stop().animate({height: "80%"},400,"swing");
             $('.adobe').stop().animate({height: "40%"},400,"swing");
 
-          } else {
-            $('.css').stop().animate({height: "0%"},400,"swing");
+        } else {
+            $(".st0").attr("class", "st0");
             $('.html').stop().animate({height: "0%"},400,"swing");
             $('.css').stop().animate({height: "0%"},400,"swing");
-            $('.html').stop().animate({height: "0%"},400,"swing");
+            $('.javascript').stop().animate({height: "0%"},400,"swing");
+            $('.adobe').stop().animate({height: "0%"},400,"swing");
+        }
 
-          }
-      });
 
-
+    });
 });

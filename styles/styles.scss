@@ -20,7 +20,9 @@
   --paragraph-primary: #faf9ed59;
   --paragraph-secondary: white;
 }
-$font-stack: 'Mukta', sans-serif;
+$title-font: 'Mukta', sans-serif;
+
+$subtitle-font: 'Noto Serif', serif;
 
 
 body,
@@ -29,7 +31,7 @@ html {
   height: 100%;
   width: 100%;
   padding: 0;
-  font-family: $font-stack;
+  font-family: $title-font;
   background-color: var(--bg-color);
 
 }
@@ -128,7 +130,7 @@ p {
 .scroll {
   position: absolute;
   bottom: 50px;
-  font-family: 'Lora', serif;
+  font-family: $subtitle-font;
   height: 100px;
   animation-name: slide-appear;
 
@@ -430,8 +432,10 @@ ul {
           align-self: flex-start;
           text-orientation: sideways;
           writing-mode: vertical-rl;
-          color: blue;
-          font-family: 'Lora', serif;
+          font-size: 14px;
+          line-height: 1.6rem;
+          color: var(--paragraph-primary);
+          font-family: $subtitle-font;
         }
       }
     }
@@ -452,11 +456,12 @@ ul {
         width: 40px;
         height: 500px;
         margin: 0 20px;
-        border: 2px solid grey;
+        border: 1px solid var(--heading-color);
         z-index: 3;
         .skill {
+          height: 0%;
           width: 100%;
-          background: blue;
+          background: var(--nav-color);
         }
         .skills-description{
           display: flex;
@@ -488,7 +493,7 @@ ul {
     justify-content: flex-start;
     min-width: 10%;
     font-size: 20px;
-    font-family: $font-stack;
+    font-family: $title-font;
     font-weight: 600;
     position: absolute;
     color: var(--paragraph-primary);
