@@ -72,7 +72,7 @@ $(document).ready(function() {
 
 
 
-    
+
 
     $(window).scroll(function(){
         // Function used to detect if the element is scrolled into view

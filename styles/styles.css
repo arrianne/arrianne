@@ -8,7 +8,8 @@
   --nav-color: #4ECDC4;
   --slider: #292922;
   --paragraph-primary: #292922;
-  --paragraph-secondary: #4ECDC4; }
+  --paragraph-secondary: #4ECDC4;
+  --background: #57cac617; }
 
 [data-theme="dark"] {
   --bg-color: #292F36;
@@ -265,7 +266,21 @@ ul {
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 300px;
     justify-content: space-between; }
+
+.svg-container {
+  background: var(--background);
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  position: relative; }
+  .svg-container h2 {
+    position: absolute;
+    top: -100px;
+    right: 20px;
+    border-top: 2px solid var(--heading-color); }
 
 .retina {
   width: 25%; }
@@ -275,7 +290,7 @@ p {
   color: var(--heading-color); }
 
 .animate {
-  fill: var(--bg-color);
+  fill: none;
   stroke-width: 0.5;
   stroke: var(--heading-color);
   stroke-dasharray: 2600;
