@@ -53,9 +53,6 @@ $(document).ready(function() {
       });
     });
 
-    $('.skills').scroll(function() {
-        console.log('this is working');
-      });
 
 
     // experience hover effect
@@ -69,8 +66,6 @@ $(document).ready(function() {
       $(this).find(".job-date").animate({left:'0px'},200).css("color", "var(--paragraph-primary)");;
       $(this).find("p").css("color", "var(--paragraph-primary)");
     });
-
-
 
 
 
@@ -93,12 +88,22 @@ $(document).ready(function() {
             $('.javascript').stop().animate({height: "80%"},400,"swing");
             $('.adobe').stop().animate({height: "40%"},400,"swing");
 
+        } else if (elementScrolled('#notebook-img')) {
+            $('.notebook').stop().animate({right: "-400px"}, 600, "linear");
+
+
+        } else if (elementScrolled('#keyboard-img')) {
+            $('.keyboard').stop().animate({left: "-400px"}, 600, "linear");
+
         } else {
             $(".st0").attr("class", "st0");
             $('.html').stop().animate({height: "0%"},400,"swing");
             $('.css').stop().animate({height: "0%"},400,"swing");
             $('.javascript').stop().animate({height: "0%"},400,"swing");
             $('.adobe').stop().animate({height: "0%"},400,"swing");
+            $('.notebook').stop().animate({right: "-800px"}, 600, "linear");
+            $('.keyboard').stop().animate({left: "-800px"}, 600, "linear");
+
         }
 
 

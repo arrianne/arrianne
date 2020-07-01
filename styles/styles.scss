@@ -343,6 +343,37 @@ ul {
   }
 }
 
+
+////////////////////// Profile
+
+.profile {
+  display: flex;
+}
+
+.notebook {
+  position: absolute;
+  right: -1000px;
+  transform: rotate(-20deg);
+  img {
+    width: 700px;
+    box-shadow: -9px 6px 21px 0px rgba(0,0,0,0.39);
+  }
+
+}
+
+.keyboard {
+  position: absolute;
+  left: -800px;
+  top: 1800px;
+  transform: rotate(15deg);
+
+  img {
+    width: 800px;
+    box-shadow: -9px 6px 21px 0px rgba(0,0,0,0.39);
+  }
+
+}
+
 //////////////// about me */
 
 .about-me {
@@ -358,16 +389,6 @@ ul {
   }
 }
 
-.notebook {
-  position: absolute;
-  right: -400px;
-  transform: rotate(-20deg);
-  img {
-    width: 800px;
-    box-shadow: -9px 6px 21px 0px rgba(0,0,0,0.39);
-  }
-
-}
 
 .svg-container {
   background: var(--background);

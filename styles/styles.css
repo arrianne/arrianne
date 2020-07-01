@@ -259,6 +259,26 @@ ul {
   transform: rotate(45deg) translate(-8px, -8px);
   background-color: white; }
 
+.profile {
+  display: flex; }
+
+.notebook {
+  position: absolute;
+  right: -1000px;
+  transform: rotate(-20deg); }
+  .notebook img {
+    width: 700px;
+    box-shadow: -9px 6px 21px 0px rgba(0, 0, 0, 0.39); }
+
+.keyboard {
+  position: absolute;
+  left: -800px;
+  top: 1800px;
+  transform: rotate(15deg); }
+  .keyboard img {
+    width: 800px;
+    box-shadow: -9px 6px 21px 0px rgba(0, 0, 0, 0.39); }
+
 .about-me {
   display: flex;
   flex-direction: column; }
@@ -268,14 +288,6 @@ ul {
     align-items: center;
     height: 300px;
     justify-content: space-between; }
-
-.notebook {
-  position: absolute;
-  right: -400px;
-  transform: rotate(-20deg); }
-  .notebook img {
-    width: 800px;
-    box-shadow: -9px 6px 21px 0px rgba(0, 0, 0, 0.39); }
 
 .svg-container {
   background: var(--background);
