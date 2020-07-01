@@ -270,8 +270,12 @@ ul {
     justify-content: space-between; }
 
 .notebook {
-  width: 300px;
-  height: 300px; }
+  position: absolute;
+  right: -400px;
+  transform: rotate(-20deg); }
+  .notebook img {
+    width: 800px;
+    box-shadow: -9px 6px 21px 0px rgba(0, 0, 0, 0.39); }
 
 .svg-container {
   background: var(--background);
