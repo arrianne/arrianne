@@ -269,6 +269,10 @@ ul {
     height: 300px;
     justify-content: space-between; }
 
+.notebook {
+  width: 300px;
+  height: 300px; }
+
 .svg-container {
   background: var(--background);
   display: flex;
