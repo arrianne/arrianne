@@ -1,4 +1,5 @@
-$(document).ready(function() {
+$(document).ready(function () {
+  console.log('what is happening?!');
 
   const toggleSwitch = document.querySelector('.toggle input[type="checkbox"]');
   const currentTheme = localStorage.getItem('theme');
@@ -83,10 +84,12 @@ $(document).ready(function() {
             $(".st0").attr("class", "st0 animate");
 
         } else if (elementScrolled('.skill')) {
-            $('.html').stop().animate({height: "20%"},400,"swing");
-            $('.css').stop().animate({height: "10%"},400,"swing");
-            $('.javascript').stop().animate({height: "80%"},400,"swing");
-            $('.adobe').stop().animate({height: "40%"},400,"swing");
+            $('.html').stop().animate({height: "90%"},400,"swing");
+            $('.css').stop().animate({height: "90%"},400,"swing");
+            $('.javascript').stop().animate({height: "70%"},400,"swing");
+            $('.vue').stop().animate({height: "70%"},400,"swing");
+            $('.adobe').stop().animate({height: "60%"},400,"swing");
+            $('.php').stop().animate({height: "40%"},400,"swing");
 
         } else if (elementScrolled('#notebook-img')) {
             $('.notebook').stop().animate({right: "-400px"}, 600, "linear");
@@ -100,12 +103,13 @@ $(document).ready(function() {
             $('.html').stop().animate({height: "0%"},400,"swing");
             $('.css').stop().animate({height: "0%"},400,"swing");
             $('.javascript').stop().animate({height: "0%"},400,"swing");
+            $('.vue').stop().animate({height: "70%"},400,"swing");
             $('.adobe').stop().animate({height: "0%"},400,"swing");
+            $('.php').stop().animate({height: "0%"},400,"swing");
             $('.notebook').stop().animate({right: "-800px"}, 600, "linear");
             $('.keyboard').stop().animate({left: "-800px"}, 600, "linear");
 
         }
-
 
     });
 });
