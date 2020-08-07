@@ -21,16 +21,20 @@
   --paragraph-primary: #faf9ed59;
   --paragraph-secondary: white;
 }
-$title-font: 'Mukta', sans-serif;
+// $title-font: 'Mukta', sans-serif;
+
+$title-font: 'Lato', sans-serif;
 
 $subtitle-font: 'Noto Serif', serif;
+
 
 
 body,
 html {
   margin: 0;
   height: 100%;
-  width: 100%;
+width: 100%;
+
   padding: 0;
   font-family: $title-font;
   background-color: var(--bg-color);
@@ -39,7 +43,6 @@ html {
 
 section {
 
-  display: flex;
   height: 100vh;
   padding: 100px;
   margin: 0 auto;
@@ -53,13 +56,14 @@ header {
 
 h1 {
   font-size: 8rem;
-  margin: 5px;
-  line-height: 0.6;
+
+  line-height: 0.1;
   color: var(--heading-color);
 }
 
 h2 {
   font-size: 4rem;
+  margin: 0 0 20px 0;
   color: var(--heading-color);
 }
 
@@ -72,6 +76,7 @@ p {
 .line-break {
   width: 100px;
   height: 10px;
+  margin-bottom: 60px;
   background-color: var(--nav-color);
 }
 
@@ -112,7 +117,7 @@ p {
 }
 @keyframes title-appear {
   0% {
-    margin: 400px 0;
+    // margin: 400px 0;
     opacity: 0;
   }
 
@@ -121,7 +126,7 @@ p {
   }
 
   100% {
-    margin: 5px 0;
+    // margin: 5px 0;
     opacity: 1;
   }
 }
@@ -536,15 +541,14 @@ ul {
 //////////////// Section experience */
 
 .experience {
-  flex-direction: column;
   p {
+    margin-top: 0;
     width: 100%;
   }
 }
 
 .experience__job {
   display: flex;
-  flex-direction: row;
   position: relative;
 
   .job-date {
@@ -592,7 +596,7 @@ ul {
     .circle-line {
       background-color: var(--heading-color);
       width: 1px;
-      height: 200px;
+      height: 180px;
       transform: rotate(180deg);
       -webkit-transform: rotate(180deg);
     }

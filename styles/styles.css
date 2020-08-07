@@ -26,11 +26,10 @@ html {
   height: 100%;
   width: 100%;
   padding: 0;
-  font-family: "Mukta", sans-serif;
+  font-family: "Lato", sans-serif;
   background-color: var(--bg-color); }
 
 section {
-  display: flex;
   height: 100vh;
   padding: 100px;
   margin: 0 auto;
@@ -42,12 +41,12 @@ header {
 
 h1 {
   font-size: 8rem;
-  margin: 5px;
-  line-height: 0.6;
+  line-height: 0.1;
   color: var(--heading-color); }
 
 h2 {
   font-size: 4rem;
+  margin: 0 0 20px 0;
   color: var(--heading-color); }
 
 p {
@@ -58,6 +57,7 @@ p {
 .line-break {
   width: 100px;
   height: 10px;
+  margin-bottom: 60px;
   background-color: var(--nav-color); }
 
 /*/
@@ -82,12 +82,10 @@ p {
 
 @keyframes title-appear {
   0% {
-    margin: 400px 0;
     opacity: 0; }
   50% {
     opacity: 0.5; }
   100% {
-    margin: 5px 0;
     opacity: 1; } }
 /*/
 //////////////// scroll arrow */
@@ -397,21 +395,19 @@ p {
 
 /*/
 //////////////// Section experience */
-.experience {
-  flex-direction: column; }
-  .experience p {
-    width: 100%; }
+.experience p {
+  margin-top: 0;
+  width: 100%; }
 
 .experience__job {
   display: flex;
-  flex-direction: row;
   position: relative; }
   .experience__job .job-date {
     display: flex;
     justify-content: flex-start;
     min-width: 10%;
     font-size: 20px;
-    font-family: "Mukta", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 600;
     position: absolute;
     color: var(--paragraph-primary); }
@@ -441,7 +437,7 @@ p {
     .experience__job .job-circle-line .circle-line {
       background-color: var(--heading-color);
       width: 1px;
-      height: 200px;
+      height: 180px;
       transform: rotate(180deg);
       -webkit-transform: rotate(180deg); }
 
