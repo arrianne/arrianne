@@ -62,23 +62,21 @@ p {
 /*/
 //////////// Title */
 .intro {
+  padding: 0 100px 100px 100px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin-top: 120px; }
+  height: 100vh; }
   .intro .lamp {
-    margin-top: 100px;
-    width: auto;
-    height: auto; }
+    margin-bottom: 30px; }
   .intro .title {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+    margin: 30px 0; }
     .intro .title h1 {
       animation-name: title-appear;
-      animation-duration: 2s; }
+      animation-duration: 2s;
+      margin: 0;
+      line-height: 0.7; }
 
 @keyframes title-appear {
   0% {
@@ -90,8 +88,6 @@ p {
 /*/
 //////////////// scroll arrow */
 .scroll {
-  position: absolute;
-  bottom: 50px;
   font-family: "Noto Serif", serif;
   height: 100px;
   animation-name: slide-appear; }
@@ -432,6 +428,9 @@ p {
   h2 {
     font-size: 3rem; }
 
+  .intro .lamp {
+    width: 700px; }
+
   section {
     padding: 40px;
     display: flex;
@@ -448,6 +447,14 @@ p {
         margin-bottom: 80px; }
 
   .profile .profile-container .developer {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width: 100%; }
+  .profile .profile-container .designer {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
     width: 100%; }
   .profile .profile-container .keyboard {
     position: absolute;
