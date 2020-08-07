@@ -102,7 +102,7 @@ $(document).ready(function () {
 
 
         } else if (elementScrolled('#keyboard-img')) {
-            $('.keyboard').stop().animate({left: "-400px"}, 600, "linear");
+            // $('.keyboard').stop().animate({left: "-400px"}, 600, "linear");
 
         } else {
             $(".st0").attr("class", "st0");
