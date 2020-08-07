@@ -1,5 +1,8 @@
 $(document).ready(function () {
-  console.log('what is happening?!');
+
+
+  /// Changing the theme to light or dark
+  //////////////////////////////////////////////////////////////////////////////
 
   const toggleSwitch = document.querySelector('.toggle input[type="checkbox"]');
   const currentTheme = localStorage.getItem('theme');
@@ -26,6 +29,7 @@ $(document).ready(function () {
 
 
   // Adding background to burger menu on scroll
+  //////////////////////////////////////////////////////////////////////////////
 
     $(window).scroll(function(){
       	var scroll = $(window).scrollTop();
@@ -57,6 +61,7 @@ $(document).ready(function () {
 
 
     // experience hover effect
+    ////////////////////////////////////////////////////////////////////////////
 
     $(".experience__job").hover(function(){
       $(this).find(".circle-inner").css("opacity", 1);
@@ -80,10 +85,11 @@ $(document).ready(function () {
             return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
         }
 
-        if (elementScrolled('.retina')) {
-            $(".st0").attr("class", "st0 animate");
-
-        } else if (elementScrolled('.skill')) {
+        // if (elementScrolled('.retina')) {
+        //     $(".st0").attr("class", "st0 animate");
+        //
+        // } else
+        if (elementScrolled('.skill')) {
             $('.html').stop().animate({height: "90%"},400,"swing");
             $('.css').stop().animate({height: "90%"},400,"swing");
             $('.javascript').stop().animate({height: "70%"},400,"swing");
@@ -107,7 +113,7 @@ $(document).ready(function () {
             $('.adobe').stop().animate({height: "0%"},400,"swing");
             $('.php').stop().animate({height: "0%"},400,"swing");
             $('.notebook').stop().animate({right: "-800px"}, 600, "linear");
-            $('.keyboard').stop().animate({left: "-800px"}, 600, "linear");
+            // $('.keyboard').stop().animate({left: "-800px"}, 600, "linear");
 
         }
 

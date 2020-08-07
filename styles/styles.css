@@ -58,7 +58,7 @@ p {
 .line-break {
   width: 100px;
   height: 10px;
-  background-color: var(--heading-color); }
+  background-color: var(--nav-color); }
 
 /*/
 //////////// Title */
@@ -150,7 +150,6 @@ p {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 20px;
   margin-right: 20px; }
   .toggle-container em {
     padding-top: 5px;
@@ -233,7 +232,7 @@ ul {
   position: fixed;
   z-index: 4;
   width: 100%;
-  height: 50px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -261,23 +260,28 @@ ul {
 
 .profile {
   display: flex; }
-
-.notebook {
-  position: absolute;
-  right: -1000px;
-  transform: rotate(-20deg); }
-  .notebook img {
-    width: 700px;
-    box-shadow: -9px 6px 21px 0px rgba(0, 0, 0, 0.39); }
-
-.keyboard {
-  position: absolute;
-  left: -800px;
-  top: 1800px;
-  transform: rotate(15deg); }
-  .keyboard img {
-    width: 800px;
-    box-shadow: -9px 6px 21px 0px rgba(0, 0, 0, 0.39); }
+  .profile .profile-container {
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    justify-content: flex-end;
+    align-items: center; }
+    .profile .profile-container .developer {
+      width: 50%; }
+    .profile .profile-container .notebook {
+      position: absolute;
+      right: -1000px;
+      transform: rotate(-20deg); }
+      .profile .profile-container .notebook img {
+        width: 700px;
+        box-shadow: -9px 6px 21px 0px rgba(0, 0, 0, 0.39); }
+    .profile .profile-container .keyboard {
+      position: absolute;
+      left: -800px;
+      transform: rotate(15deg); }
+      .profile .profile-container .keyboard img {
+        width: 800px;
+        box-shadow: -9px 6px 21px 0px rgba(0, 0, 0, 0.39); }
 
 .about-me {
   display: flex;
@@ -306,7 +310,6 @@ ul {
   width: 25%; }
 
 p {
-  width: 50%;
   color: var(--heading-color); }
 
 .animate {
