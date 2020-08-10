@@ -408,6 +408,8 @@ ul {
   flex-direction: row;
 }
 
+
+
 // .svg-container {
 //   background: var(--background);
 //   display: flex;
@@ -478,6 +480,9 @@ ul {
   .icon-circle {
     width: 200px;
     height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     border-radius: 50%;
     background-color: var(--nav-color);
@@ -485,6 +490,30 @@ ul {
   }
 }
 
+.box {
+  border: 5px solid white;
+  // animation: createBox .25s;
+  animation-name: resize;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  width: 98px;
+  height: 98px;
+}
+
+@keyframes resize {
+  0% {
+    width: 30px;
+    height: 60px;
+  }
+  50% {
+    width: 100px;
+    height: 70px;
+  }
+  100% {
+    width: 30px;
+    height: 60px;
+  }
+}
 
     //////////////// skills
 
