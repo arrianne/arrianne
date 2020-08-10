@@ -24,7 +24,10 @@ body,
 html {
   margin: 0;
   height: 100%;
-  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  height: 100%;
+  width: auto;
   padding: 0;
   font-family: "Lato", sans-serif;
   background-color: var(--bg-color); }
@@ -297,12 +300,6 @@ p {
 @keyframes retina {
   to {
     stroke-dashoffset: 0; } }
-.title-box {
-  height: 500px;
-  z-index: 1;
-  height: 100%;
-  display: flex; }
-
 .icon-container {
   display: flex;
   justify-content: space-between; }
@@ -321,57 +318,40 @@ p {
     border-radius: 50%;
     background-color: var(--nav-color); }
 
-.about-descriptions {
+.skills {
   display: flex;
-  justify-content: space-between;
-  align-self: center;
-  width: 60%;
-  height: 50px;
-  margin-top: 20px;
-  border: 0; }
-  .about-descriptions .skills-description {
-    background: none;
+  align-items: center; }
+  .skills .skills-container {
     display: flex;
-    width: 40px;
-    height: 100px;
-    margin: 0 20px;
-    justify-content: center; }
-    .about-descriptions .skills-description .skill {
-      align-self: flex-start;
-      text-orientation: sideways;
-      writing-mode: vertical-rl;
-      font-size: 14px;
-      line-height: 1.6rem;
-      color: var(--paragraph-primary);
-      font-family: "Noto Serif", serif; }
-
-.about-container {
-  display: flex;
-  justify-content: space-between;
-  align-self: center;
-  width: 60%;
-  height: 500px;
-  margin-top: 40px;
-  align-items: center;
-  border: 0; }
-  .about-container .skills-list {
-    display: flex;
-    align-items: flex-end;
-    width: 40px;
-    height: 500px;
-    margin: 0 20px;
-    border: 1px solid var(--heading-color);
-    z-index: 3; }
-    .about-container .skills-list .skill {
-      height: 0%;
-      width: 100%;
-      background: var(--nav-color); }
-    .about-container .skills-list .skills-description {
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 40px; }
+    .skills .skills-container .skills-list {
       display: flex;
+      align-items: flex-end;
+      width: 40px;
+      height: 500px;
+      margin: 0 20px;
+      border: 1px solid var(--heading-color); }
+      .skills .skills-container .skills-list .skill {
+        height: 0%;
+        width: 100%;
+        background: var(--nav-color); }
+  .skills .skills-descriptions {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 20px; }
+    .skills .skills-descriptions .skill-name {
+      display: flex;
+      align-items: center;
       width: 40px;
       height: 100px;
       margin: 0 20px;
-      background: #bc9ec1; }
+      writing-mode: vertical-rl;
+      font-size: 14px;
+      color: var(--paragraph-primary);
+      font-family: "Noto Serif", serif; }
 
 /*/
 //////////////// Section experience */
@@ -459,6 +439,22 @@ p {
   .profile .profile-container .keyboard {
     position: absolute;
     left: 0 img;
-      left-width: 300px; } }
+      left-width: 300px; }
+
+  .about-container {
+    width: 100%; }
+
+  .skills .skills-container {
+    justify-content: center;
+    width: 100%; }
+    .skills .skills-container .skills-list {
+      height: 300px;
+      margin: 15px; }
+  .skills .skills-descriptions {
+    justify-content: space-between;
+    width: 100%; }
+    .skills .skills-descriptions .skill-name {
+      font-size: 12px;
+      margin: 0 5px; } }
 
 /*# sourceMappingURL=styles.css.map */

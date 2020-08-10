@@ -33,8 +33,10 @@ body,
 html {
   margin: 0;
   height: 100%;
-width: 100%;
-
+  overflow-x: hidden;
+  position: relative;
+  height: 100%;
+  width: auto;
   padding: 0;
   font-family: $title-font;
   background-color: var(--bg-color);
@@ -451,13 +453,13 @@ ul {
 }
 
 ///////////////// skills
-
-.title-box {
-  height: 500px;
-  z-index: 1;
-  height: 100%;
-  display: flex;
-}
+//
+// .title-box {
+//   height: 500px;
+//   z-index: 1;
+//   height: 100%;
+//   display: flex;
+// }
 
 .icon-container {
   display:flex;
@@ -487,66 +489,58 @@ ul {
     //////////////// skills
 
 
+.skills {
+  display: flex;
+  align-items: center;
 
-    .about-descriptions {
-      display: flex;
-      justify-content: space-between;
-      align-self: center;
-      width: 60%;
-      height: 50px;
-      margin-top: 20px;
-      border: 0;
-      .skills-description{
-        background: none;
-        display: flex;
-        width: 40px;
-        height: 100px;
-        margin: 0 20px;
-        justify-content: center;
-        .skill {
-          align-self: flex-start;
-          text-orientation: sideways;
-          writing-mode: vertical-rl;
-          font-size: 14px;
-          line-height: 1.6rem;
-          color: var(--paragraph-primary);
-          font-family: $subtitle-font;
-        }
-      }
-    }
 
-    .about-container {
+  .skills-container {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 40px;
+
+    .skills-list {
       display: flex;
-      justify-content: space-between;
-      align-self: center;
-      width: 60%;
+      align-items: flex-end;
+      width: 40px;
       height: 500px;
-      margin-top: 40px;
-      align-items: center;
-      border: 0;
+      margin: 0 20px;
+      border: 1px solid var(--heading-color);
 
-      .skills-list {
-        display: flex;
-        align-items: flex-end;
-        width: 40px;
-        height: 500px;
-        margin: 0 20px;
-        border: 1px solid var(--heading-color);
-        z-index: 3;
-        .skill {
-          height: 0%;
-          width: 100%;
-          background: var(--nav-color);
-        }
-        .skills-description{
-          display: flex;
-          width: 40px;
-          height: 100px;
-          margin: 0 20px;
-          background: #bc9ec1;
-        }
+      .skill {
+        height: 0%;
+        width: 100%;
+        background: var(--nav-color);
       }
     }
+  }
+
+  .skills-descriptions {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 20px;
+
+    .skill-name {
+      display: flex;
+      align-items: center;
+      width: 40px;
+      height: 100px;
+      margin: 0 20px;
+      writing-mode: vertical-rl;
+      font-size: 14px;
+      color: var(--paragraph-primary);
+      font-family: "Noto Serif", serif;
+    }
+  }
+
+}
+
+
+
+
+
 
 /*/
 //////////////// Section experience */
@@ -677,5 +671,28 @@ ul {
     }
 
   }
+  .about-container {
+    width: 100%;
+  }
+  .skills {
+    .skills-container {
+      justify-content: center;
+      width: 100%;
+      .skills-list {
+        height: 300px;
+        margin: 15px;
+      }
+    }
+    .skills-descriptions {
+      justify-content: space-between;
+      width: 100%;
+      .skill-name {
+        font-size: 12px;
+        margin: 0 5px;
+
+      }
+    }
+  }
+
 
 }
