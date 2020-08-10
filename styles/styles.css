@@ -455,6 +455,16 @@ p {
     width: 100%; }
     .skills .skills-descriptions .skill-name {
       font-size: 12px;
-      margin: 0 5px; } }
+      margin: 0 5px; }
+
+  .experience__job .job-date {
+    left: 0;
+    top: 10px;
+    transform: rotate(-90deg);
+    font-size: 16px; }
+  .experience__job .job-circle-line {
+    margin-left: 30px; }
+    .experience__job .job-circle-line .circle-line {
+      height: 300px; } }
 
 /*# sourceMappingURL=styles.css.map */
