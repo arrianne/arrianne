@@ -24,7 +24,6 @@ body,
 html {
   margin: 0;
   height: 100%;
-  overflow-x: hidden;
   position: relative;
   height: 100%;
   width: auto;
@@ -49,6 +48,9 @@ h1 {
 h2 {
   font-size: 4rem;
   margin: 0 0 20px 0;
+  color: var(--heading-color); }
+
+h3 {
   color: var(--heading-color); }
 
 p {
@@ -319,6 +321,8 @@ p {
     justify-content: center;
     flex-direction: column;
     border-radius: 50%;
+    position: relative;
+    overflow: hidden;
     background-color: var(--nav-color); }
 
 .box {
@@ -339,6 +343,27 @@ p {
   100% {
     width: 30px;
     height: 60px; } }
+.dynamic-line {
+  width: 80px;
+  height: 5px;
+  top: 50px;
+  margin: 10px;
+  background-color: white;
+  animation-name: dynamic;
+  animation-duration: 3s;
+  animation-iteration-count: infinite; }
+  .dynamic-line .one {
+    animation-delay: 1s; }
+  .dynamic-line .two {
+    animation-delay: 1.2; }
+  .dynamic-line .three {
+    animation-delay: 1.4; }
+
+@keyframes dynamic {
+  0% {
+    margin-left: -300px; }
+  100% {
+    margin-left: 300px; } }
 .skills {
   display: flex;
   align-items: center; }
