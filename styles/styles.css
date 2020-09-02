@@ -265,22 +265,10 @@ ul {
     height: 500px;
     justify-content: flex-end;
     align-items: center; }
+    .profile .profile-container p {
+      width: 80%; }
     .profile .profile-container .developer {
       width: 50%; }
-    .profile .profile-container .notebook {
-      position: absolute;
-      right: -1000px;
-      transform: rotate(-20deg); }
-      .profile .profile-container .notebook img {
-        width: 700px;
-        box-shadow: -9px 6px 21px 0px rgba(0, 0, 0, 0.39); }
-    .profile .profile-container .keyboard {
-      position: absolute;
-      left: -800px;
-      transform: rotate(15deg); }
-      .profile .profile-container .keyboard img {
-        width: 800px;
-        box-shadow: -9px 6px 21px 0px rgba(0, 0, 0, 0.39); }
 
 .services {
   flex-direction: row; }
@@ -308,11 +296,11 @@ p {
   .icon-container .icon {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     width: 30%; }
   .icon-container p {
-    text-align: center; }
+    text-align: center;
+    width: 70%; }
   .icon-container .icon-circle {
     width: 200px;
     height: 200px;

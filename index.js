@@ -88,7 +88,7 @@ $(document).ready(function () {
           }
 
           // This is where we use the function to detect if ".box2" is scrolled into view, and when it is add the class ".animated" to the <p> child element
-          if(elementScrolled('.skills-container')) {
+          if(elementScrolled('.skill')) {
               console.log("i did it!");
                $('.html').stop().animate({height: "90%"},400,"swing");
                $('.css').stop().animate({height: "90%"},400,"swing");
@@ -96,6 +96,17 @@ $(document).ready(function () {
                $('.vue').stop().animate({height: "70%"},400,"swing");
                $('.adobe').stop().animate({height: "60%"},400,"swing");
                $('.php').stop().animate({height: "40%"},400,"swing");
+
+          } else if (elementScrolled('#notebook-img')) {
+                $('.keyboard').stop().animate({left: "-400px"}, 600, "linear");
+
+          } else if (elementScrolled('.developer')) {
+            $(".keyboard").css({
+            'left': '-400px',
+
+        });
+                // $('.keyboard').stop().animate({left: "-400px"}, 600, "linear");
+
           } else {
                 console.log('nope');
                $('.html').stop().animate({height: "0%"},400,"swing");
@@ -104,7 +115,6 @@ $(document).ready(function () {
                $('.vue').stop().animate({height: "0%"},400,"swing");
                $('.adobe').stop().animate({height: "0%"},400,"swing");
                $('.php').stop().animate({height: "0%"},400,"swing");
-
           }
       });
         //

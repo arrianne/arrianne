@@ -359,6 +359,9 @@ ul {
 .profile {
   display: flex;
   .profile-container {
+    p {
+      width: 80%;
+    }
     display: flex;
     flex-direction: row;
     height: 500px;
@@ -367,27 +370,12 @@ ul {
     .developer {
       width: 50%;
     }
-    .notebook {
-      position: absolute;
-      right: -1000px;
-      transform: rotate(-20deg);
-      img {
-        width: 700px;
-        box-shadow: -9px 6px 21px 0px rgba(0,0,0,0.39);
-      }
+    .pen {
 
     }
 
     .keyboard {
-      position: absolute;
-      left: -800px;
-      transform: rotate(15deg);
-
-      img {
-        width: 800px;
-        box-shadow: -9px 6px 21px 0px rgba(0,0,0,0.39);
-      }
-
+      
     }
   }
 }
@@ -479,12 +467,12 @@ ul {
   .icon {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     width: 30%;
   }
   p {
     text-align: center;
+    width: 70%;
   }
 
   .icon-circle {
@@ -738,6 +726,7 @@ ul {
   }
   .profile {
     .profile-container {
+
       .developer {
         flex-direction: column;
         align-items: center;
