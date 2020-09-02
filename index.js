@@ -78,7 +78,7 @@ $(document).ready(function () {
 
     $(window).scroll(function(){
 
-    // This is then function used to detect if the element is scrolled into view
+          // Has element scrolled into view
           function elementScrolled(elem)
           {
               var docViewTop = $(window).scrollTop();
@@ -89,7 +89,6 @@ $(document).ready(function () {
 
           // This is where we use the function to detect if ".box2" is scrolled into view, and when it is add the class ".animated" to the <p> child element
           if(elementScrolled('.skill')) {
-              console.log("i did it!");
                $('.html').stop().animate({height: "90%"},400,"swing");
                $('.css').stop().animate({height: "90%"},400,"swing");
                $('.javascript').stop().animate({height: "70%"},400,"swing");
@@ -97,54 +96,23 @@ $(document).ready(function () {
                $('.adobe').stop().animate({height: "60%"},400,"swing");
                $('.php').stop().animate({height: "40%"},400,"swing");
 
-          } else if (elementScrolled('#notebook-img')) {
-                $('.keyboard').stop().animate({left: "-400px"}, 600, "linear");
+          } else if (elementScrolled('.keyboard')) {
+            console.log("here's the keyboard");
+                $('.keyboard').animate({left: "-400px"}, 1000, "swing");
 
-          } else if (elementScrolled('.developer')) {
-            $(".keyboard").css({
-            'left': '-400px',
-
-        });
-                // $('.keyboard').stop().animate({left: "-400px"}, 600, "linear");
+          } else if (elementScrolled('.pen')) {
+            $('.pen').animate({right: "-200px"}, 1000, "swing");
 
           } else {
-                console.log('nope');
-               $('.html').stop().animate({height: "0%"},400,"swing");
-               $('.css').stop().animate({height: "0%"},400,"swing");
-               $('.javascript').stop().animate({height: "0%"},400,"swing");
-               $('.vue').stop().animate({height: "0%"},400,"swing");
-               $('.adobe').stop().animate({height: "0%"},400,"swing");
-               $('.php').stop().animate({height: "0%"},400,"swing");
+
+                 $('.html').stop().animate({height: "0%"},400,"swing");
+                 $('.css').stop().animate({height: "0%"},400,"swing");
+                 $('.javascript').stop().animate({height: "0%"},400,"swing");
+                 $('.vue').stop().animate({height: "0%"},400,"swing");
+                 $('.adobe').stop().animate({height: "0%"},400,"swing");
+                 $('.php').stop().animate({height: "0%"},400,"swing");
           }
       });
-        //
-        //     $('.html').stop().animate({height: "90%"},400,"swing");
-        //     $('.css').stop().animate({height: "90%"},400,"swing");
-        //     $('.javascript').stop().animate({height: "70%"},400,"swing");
-        //     $('.vue').stop().animate({height: "70%"},400,"swing");
-        //     $('.adobe').stop().animate({height: "60%"},400,"swing");
-        //     $('.php').stop().animate({height: "40%"},400,"swing");
-        //
-        // } else if (elementScrolled('#notebook-img')) {
-        //
-        //     $('.notebook').stop().animate({right: "-400px"}, 600, "linear");
-        //
-        //
-        // } else if (elementScrolled('#keyboard-img')) {
-        //     $('.keyboard').stop().animate({left: "-400px"}, 600, "linear");
-        //
-        // } else {
-        //     $(".st0").attr("class", "st0");
-        //     $('.html').stop().animate({height: "0%"},400,"swing");
-        //     $('.css').stop().animate({height: "0%"},400,"swing");
-        //     $('.javascript').stop().animate({height: "0%"},400,"swing");
-        //     $('.vue').stop().animate({height: "70%"},400,"swing");
-        //     $('.adobe').stop().animate({height: "0%"},400,"swing");
-        //     $('.php').stop().animate({height: "0%"},400,"swing");
-        //     $('.notebook').stop().animate({right: "-800px"}, 600, "linear");
-        //     $('.keyboard').stop().animate({left: "-800px"}, 600, "linear");
-        //
-        // }
 
-    // });
+
 });

@@ -263,11 +263,22 @@ ul {
     display: flex;
     flex-direction: row;
     height: 500px;
-    justify-content: flex-end;
     align-items: center; }
-    .profile .profile-container p {
-      width: 80%; }
-    .profile .profile-container .developer {
+  .profile .designer {
+    justify-content: flex-start; }
+    .profile .designer .pen {
+      width: 50%;
+      position: absolute;
+      right: -400px; }
+    .profile .designer .designer-title {
+      width: 50%; }
+  .profile .developer {
+    justify-content: flex-end; }
+    .profile .developer .keyboard {
+      width: 50%;
+      position: absolute;
+      left: -700px; }
+    .profile .developer .developer-title {
       width: 50%; }
 
 .services {
