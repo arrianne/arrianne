@@ -446,6 +446,30 @@ p {
       transform: rotate(180deg);
       -webkit-transform: rotate(180deg); }
 
+.form-container div {
+  margin: 50px 0 50px 0; }
+.form-container input {
+  border-right: 0;
+  border-left: 0;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 2px solid var(--heading-color);
+  border-top: 0;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  font-size: 16px;
+  font-family: "Lato", sans-serif; }
+.form-container textarea {
+  width: 100%;
+  border: 2px solid var(--heading-color);
+  box-shadow: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  color: var(--heading-color);
+  padding: 50px 10px; }
+.form-container .contact-submit {
+  padding: 10px 50px; }
+
 @media screen and (max-width: 720px) {
   .title h1 {
     font-size: 6rem; }

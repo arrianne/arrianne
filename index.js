@@ -105,12 +105,12 @@ $(document).ready(function () {
 
           } else {
 
-                 $('.html').stop().animate({height: "0%"},400,"swing");
-                 $('.css').stop().animate({height: "0%"},400,"swing");
-                 $('.javascript').stop().animate({height: "0%"},400,"swing");
-                 $('.vue').stop().animate({height: "0%"},400,"swing");
-                 $('.adobe').stop().animate({height: "0%"},400,"swing");
-                 $('.php').stop().animate({height: "0%"},400,"swing");
+               $('.html').stop().animate({height: "0%"},400,"swing");
+               $('.css').stop().animate({height: "0%"},400,"swing");
+               $('.javascript').stop().animate({height: "0%"},400,"swing");
+               $('.vue').stop().animate({height: "0%"},400,"swing");
+               $('.adobe').stop().animate({height: "0%"},400,"swing");
+               $('.php').stop().animate({height: "0%"},400,"swing");
           }
       });
 
