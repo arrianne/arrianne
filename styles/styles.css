@@ -446,29 +446,45 @@ p {
       transform: rotate(180deg);
       -webkit-transform: rotate(180deg); }
 
-.form-container div {
-  margin: 50px 0 50px 0; }
-.form-container input {
-  border-right: 0;
-  border-left: 0;
-  width: 100%;
-  padding: 10px;
-  border-bottom: 2px solid var(--heading-color);
-  border-top: 0;
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  font-size: 16px;
-  font-family: "Lato", sans-serif; }
-.form-container textarea {
-  width: 100%;
+.contact h2 {
+  width: 100%; }
+.contact .container-map {
+  width: 50%; }
+  .contact .container-map .gmap_canvas {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: -200px;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    width: 100%; }
+.contact .form-container {
   border: 2px solid var(--heading-color);
-  box-shadow: none;
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  color: var(--heading-color);
-  padding: 50px 10px; }
-.form-container .contact-submit {
-  padding: 10px 50px; }
+  width: 50%; }
+  .contact .form-container div {
+    margin: 50px 0 50px 0; }
+  .contact .form-container input {
+    border-right: 0;
+    border-left: 0;
+    padding: 10px;
+    border-bottom: 2px solid var(--heading-color);
+    border-top: 0;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    font-size: 16px;
+    font-family: "Lato", sans-serif; }
+  .contact .form-container textarea {
+    border: 2px solid var(--heading-color);
+    box-shadow: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    color: var(--heading-color);
+    padding: 50px 10px;
+    font-size: 16px;
+    font-family: "Lato", sans-serif; }
+  .contact .form-container .contact-submit {
+    padding: 10px 50px; }
 
 @media screen and (max-width: 720px) {
   .title h1 {
