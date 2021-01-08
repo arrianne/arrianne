@@ -1,3 +1,5 @@
+// To watch and compile sass --watch styles/styles.scss:styles/styles.css
+
 /* COMMON STYLES
   -------------------------------- */
 /* VARIABLES */
@@ -284,7 +286,7 @@ input:checked + .slider:before {
   height: 100vh;
   background-color: var(--nav-color);
   z-index: 3;
-  left: -1500px;
+  left: -2000px;
   transition: 1s;
 }
 
@@ -697,60 +699,49 @@ ul {
   }
 }
 
-
-.contact{
-  h2 {
-    width: 100%;
-  }
-  .container-map {
+/////////////////////////////////////////////////////////
+///// contact Form
+.contact {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  .contact-left {
     width: 50%;
-    .gmap_canvas {
-      height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: -200px;
-  left: 0;
-  right: 0;
-  z-index: 0;
-
-      width:100%;
-    }
+  }
+  .contact-right {
+    width: 50%;
   }
 
   .form-container {
-    border: 2px solid var(--heading-color);
-    width: 50%;
-    div {
-      margin: 50px 0 50px 0;
-    }
-    input {
-      border-right: 0;
-      border-left: 0;
-      padding: 10px;
-      border-bottom: 2px solid var(--heading-color);
-      border-top: 0;
-      background-color: transparent;
-      -webkit-box-shadow: none;
-      font-size: 16px;
-      font-family: $title-font;
-    }
-    textarea {
+    width: 100%;
+    fieldset {
+      border: none;
 
-      border: 2px solid var(--heading-color);
-      box-shadow: none;
-      background-color: transparent;
-      -webkit-box-shadow: none;
-      color: var(--heading-color);
-      padding: 50px 10px;
-      font-size: 16px;
-      font-family: $title-font;
-    }
-    .contact-submit {
-      padding: 10px 50px;
+
+
+      input {
+        width: 100%;
+        padding: 15px 0;
+        font-family: $title-font;
+        background: transparent;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: var(--heading-color);
+      }
+      textarea {
+        width: 100%;
+        padding: 15px 0;
+        font-family: $title-font;
+        background: transparent;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: var(--heading-color);
+      }
     }
   }
 }
-
 
 
 ///////////////////////////////////////////////////////////////////////////////
