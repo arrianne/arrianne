@@ -34,11 +34,8 @@ $subtitle-font: 'Noto Serif', serif;
 body,
 html {
   margin: 0;
-  height: 100%;
-  //This may be causing the scroll function not to work
-  // overflow-x: hidden;
-  position: relative;
-  height: 100%;
+  overflow-x: hidden;
+  position: relative;  
   width: auto;
   padding: 0;
   font-family: $title-font;
@@ -701,11 +698,14 @@ ul {
 /////////////////////////////////////////////////////////
 ///// contact Form
 .contact {
-  height: 150px;
-  background-color: var(--nav-color);
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+    height: 550px;
+    display: flex;
+    background-color: var(--nav-color);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 100px;
 
   .line-break {
     background-color: white;
