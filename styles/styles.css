@@ -7,7 +7,7 @@
   --burger-color: #292922;
   --nav-color: #4ECDC4;
   --slider: #292922;
-  --paragraph-primary: #292922;
+  --paragraph-primary: #292922c4;
   --paragraph-secondary: #4ECDC4;
   --background: #57cac617;
 }
@@ -342,14 +342,9 @@ ul li {
 
 .services {
   flex-direction: row;
-}
-
-.retina {
-  width: 25%;
-}
-
-p {
-  color: var(--heading-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .animate {

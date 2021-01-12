@@ -29,21 +29,21 @@ $(document).ready(function () {
 
   // Adding background to burger menu on scroll
   ////////////////////////////////////////////////////////////////////////////
-    // $(window).scroll(function(){
-    //
-    //
-    //   	var scroll = $(window).scrollTop();
-    //
-    // 	  if (scroll > 300) {
-    //       console.log('am i working?');
-    // 	    $(".burger-menu_container").css("background" , "#36c9c6");
-    //       $(".bar").css("background" , "white");
-    //       console.log('how about here?');
-    // 	  } else{
-    // 		  $(".burger-menu_container").css("background" , "none");
-    //       $(".bar").css("background" , "#34435e");
-    // 	  }
-    //   });
+    $(window).scroll(function(){
+
+
+      	var scroll = $(window).scrollTop();
+
+    	  if (scroll > 300) {
+          console.log('am i working?');
+    	    $(".burger-menu_container").css("background" , "#36c9c6");
+          $(".bar").css("background" , "white");
+          console.log('how about here?');
+    	  } else{
+    		  $(".burger-menu_container").css("background" , "none");
+          $(".bar").css("background" , "#34435e");
+    	  }
+      });
 
 
     $('.burger-menu').click(function(){
