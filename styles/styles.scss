@@ -401,9 +401,6 @@ ul {
     }
   }
 
-
-
-
 }
 
 
@@ -724,7 +721,6 @@ ul {
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    padding: 100px;
 
   .line-break {
     background-color: white;
@@ -801,6 +797,8 @@ ul {
 
 @media screen and (max-width: 720px) {
 
+
+
   .title h1 {
     font-size: 6rem;
   }
@@ -819,7 +817,11 @@ ul {
     display: flex;
     align-items: center;
   }
+  .about-container {
+    width: 100%;
+  }
   .services {
+    margin-bottom: 500px;
     flex-direction: column;
     .icon-container {
       flex-direction: column;
@@ -833,32 +835,64 @@ ul {
 
   }
   .profile {
-    .profile-container {
+    margin-bottom: 500px;
 
       .developer {
         flex-direction: column;
         align-items: center;
         display: flex;
+        justify-content: center;
         width: 100%;
+
+        .developer-title {
+          width: 100%;
+        }
+
+        .keyboard {
+          position: absolute;
+          width: 100%;
+          left: 0;
+          img {
+            width: 70%;
+
+          }
+        }
       }
       .designer {
         flex-direction: column;
         align-items: center;
         display: flex;
         width: 100%;
+        .pen {
+          right: 0;
+          img {
+            width: 70%;
+          }
+
+        }
+
+        .designer-title {
+            width: 100%;
+        }
+
       }
-      .keyboard {
-        position: absolute;
-        left: 0
-        img {
-          width: 300px;
+  }
+  .experience {
+    margin-bottom: 800px;
+    .experience__job {
+      .job-date {
+        left: 0;
+        top: 10px;
+        transform: rotate(-90deg);
+        font-size: 16px;
+      }
+      .job-circle-line {
+        margin-left: 30px;
+        .circle-line {
+            height: 300px;
         }
       }
     }
-
-  }
-  .about-container {
-    width: 100%;
   }
   .skills {
     .skills-container {
@@ -879,17 +913,16 @@ ul {
       }
     }
   }
-  .experience__job {
-    .job-date {
-      left: 0;
-      top: 10px;
-      transform: rotate(-90deg);
-      font-size: 16px;
+  .contact {
+    flex-direction: column;
+    .contact-left {
+      width: 100%;
     }
-    .job-circle-line {
-      margin-left: 30px;
-      .circle-line {
-          height: 300px;
+    .contact-right {
+      width: 100%;
+      fieldset {
+        display: flex;
+        justify-content: center;
       }
     }
   }
