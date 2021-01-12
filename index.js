@@ -35,10 +35,9 @@ $(document).ready(function () {
       	var scroll = $(window).scrollTop();
 
     	  if (scroll > 300) {
-          console.log('am i working?');
     	    $(".burger-menu_container").css("background" , "#36c9c6");
           $(".bar").css("background" , "white");
-          console.log('how about here?');
+
     	  } else{
     		  $(".burger-menu_container").css("background" , "none");
           $(".bar").css("background" , "#34435e");
@@ -59,6 +58,21 @@ $(document).ready(function () {
       });
     });
 
+    // Scrolling to section from anchors and closing menu_container
+
+
+    function anchorScroll() {
+      $('a').click(function(){
+        // $(".header").toggleClass('active');
+        $(".header").toggleClass("header-active");
+
+        $('html, body').stop().animate({
+          scrollTop: $($(this).attr('href')).offset().top - 160
+        }, 300);
+        return false;
+      });
+    }
+    anchorScroll();
 
 
     // experience hover effect
