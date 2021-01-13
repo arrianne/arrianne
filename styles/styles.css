@@ -338,18 +338,33 @@ ul li {
 .profile .designer .pen {
   width: 50%;
   position: absolute;
-  right: -400px;
+  right: -100%;
+  transition: all 2s ease;
+}
+.profile .designer .pen img {
+  width: 50%;
+}
+.profile .designer .pen-active {
+  right: -10%;
 }
 .profile .designer .designer-title {
   width: 50%;
 }
 .profile .developer {
   justify-content: flex-end;
+  position: relative;
 }
 .profile .developer .keyboard {
   width: 50%;
   position: absolute;
-  left: -700px;
+  left: -100%;
+  transition: all 2s ease;
+}
+.profile .developer .keyboard img {
+  width: 140%;
+}
+.profile .developer .keyboard-active {
+  left: -20%;
 }
 .profile .developer .developer-title {
   width: 50%;
@@ -625,7 +640,7 @@ ul li {
   margin-top: 35px;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
   .title h1 {
     font-size: 6rem;
   }
@@ -678,10 +693,14 @@ ul li {
   .profile .developer .keyboard {
     position: absolute;
     width: 100%;
-    left: 0;
+    top: 90%;
   }
   .profile .developer .keyboard img {
-    width: 70%;
+    width: 100%;
+  }
+  .profile .developer .keyboard-active {
+    left: 0;
+    top: 90%;
   }
   .profile .designer {
     flex-direction: column;
@@ -689,11 +708,11 @@ ul li {
     display: flex;
     width: 100%;
   }
-  .profile .designer .pen {
-    right: 0;
-  }
   .profile .designer .pen img {
-    width: 70%;
+    width: 60%;
+  }
+  .profile .designer .pen-active {
+    right: -10%;
   }
   .profile .designer .designer-title {
     width: 100%;

@@ -75,6 +75,9 @@ $(document).ready(function () {
     anchorScroll();
 
 
+
+
+
     // experience hover effect
     //////////////////////////////////////////////////////////////////////////
 
@@ -101,6 +104,8 @@ $(document).ready(function () {
               return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
           }
 
+
+
           // This is where we use the function to detect if ".box2" is scrolled into view, and when it is add the class ".animated" to the <p> child element
           if(elementScrolled('.skill')) {
                $('.html').stop().animate({height: "90%"},400,"swing");
@@ -111,11 +116,11 @@ $(document).ready(function () {
                $('.php').stop().animate({height: "40%"},400,"swing");
 
           } else if (elementScrolled('.keyboard')) {
-            console.log("here's the keyboard");
-                $('.keyboard').animate({left: "-400px"}, 1000, "swing");
+            $( '.keyboard' ).addClass("keyboard-active");
+
 
           } else if (elementScrolled('.pen')) {
-            $('.pen').animate({right: "-200px"}, 1000, "swing");
+            $( '.pen' ).addClass("pen-active");
 
           } else {
 

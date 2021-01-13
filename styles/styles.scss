@@ -383,7 +383,16 @@ ul {
     .pen {
       width: 50%;
       position: absolute;
-      right: -400px;
+      right: -100%;
+      transition: all 2s ease;
+      img {
+        width: 50%;
+      }
+    }
+
+    .pen-active {
+      right: -10%;
+
     }
     .designer-title {
       width: 50%;
@@ -391,10 +400,18 @@ ul {
   }
   .developer {
     justify-content: flex-end;
+    position: relative;
     .keyboard {
       width: 50%;
       position: absolute;
-      left: -700px;
+      left: -100%;
+      transition: all 2s ease;
+      img {
+        width: 140%;
+      }
+    }
+    .keyboard-active {
+      left: -20%;
     }
     .developer-title {
       width: 50%;
@@ -794,8 +811,35 @@ ul {
 // Mobile
 
 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
-@media screen and (max-width: 720px) {
+   //  .keyboard {
+   //    position: absolute;
+   //    width: 100%;
+   //    top: 90%;
+   //
+   //    img {
+   //      width: 100%;
+   //
+   //    }
+   //  }
+   //  .keyboard-active {
+   //    left: 0;
+   //    top: 90%;
+   //  } here
+   // }
+   //
+   // .pen {
+   //   img {
+   //     width: 60%;
+   //   }
+   // }
+   // .pen-active {
+   //   right: -10%;
+   }
+
+
+@media screen and (max-width: 768px) {
 
 
 
@@ -851,11 +895,16 @@ ul {
         .keyboard {
           position: absolute;
           width: 100%;
-          left: 0;
+          top: 90%;
+
           img {
-            width: 70%;
+            width: 100%;
 
           }
+        }
+        .keyboard-active {
+          left: 0;
+          top: 90%;
         }
       }
       .designer {
@@ -864,11 +913,12 @@ ul {
         display: flex;
         width: 100%;
         .pen {
-          right: 0;
           img {
-            width: 70%;
+            width: 60%;
           }
-
+        }
+        .pen-active {
+          right: -10%;
         }
 
         .designer-title {
