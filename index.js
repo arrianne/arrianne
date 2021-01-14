@@ -62,7 +62,7 @@ $(document).ready(function () {
 
 
     function anchorScroll() {
-      $('a').click(function(){
+      $('.menu-link').click(function(){
         // $(".header").toggleClass('active');
         $(".header").toggleClass("header-active");
 
