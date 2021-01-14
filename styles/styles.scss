@@ -475,20 +475,20 @@ ul {
 //
 // }
 
-.animate {
-  fill: none;
-  stroke-width: 0.5;
-  stroke: var(--heading-color);
-  stroke-dasharray: 2600;
-  stroke-dashoffset: 2600;
-  animation: retina 20s forwards linear;
-}
-
-@keyframes retina {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
+// .animate {
+//   fill: none;
+//   stroke-width: 0.5;
+//   stroke: var(--heading-color);
+//   stroke-dasharray: 2600;
+//   stroke-dashoffset: 2600;
+//   animation: retina 20s forwards linear;
+// }
+//
+// @keyframes retina {
+//   to {
+//     stroke-dashoffset: 0;
+//   }
+// }
 
 ///////////////// skills
 //
@@ -533,6 +533,42 @@ ul {
   }
 }
 
+.intuitive-circle {
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.intuitive-line {
+  width: 20px;
+  height: 5px;
+  top: 50px;
+  border-radius: 25px;
+  margin: 10px;
+  position: absolute;
+  background-color: white;
+  animation-name: intuitive;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.intuitive-line.one {
+  transform: rotate(45deg);
+  left: 14%;
+}
+.intuitive-line.two {
+  transform: rotate(90deg);
+  top: 14%;
+}
+.intuitive-line.three {
+transform: rotate(135deg);
+right: 14%;
+}
+
+
 .box {
   border: 5px solid white;
   // animation: createBox .25s;
@@ -562,6 +598,7 @@ ul {
   width: 80px;
   height: 5px;
   top: 50px;
+  border-radius: 25px;
   margin: 10px;
   background-color: white;
   animation-name: dynamic;
@@ -588,6 +625,19 @@ ul {
   }
 }
 
+@keyframes intuitive {
+  0% {
+
+    margin: 15px;
+  }
+  50% {
+    margin: 12px;
+  }
+
+  100% {
+    margin: 15px;
+  }
+}
 
 @keyframes dynamic {
   0% {
