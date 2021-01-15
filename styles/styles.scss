@@ -57,8 +57,7 @@ header {
 }
 
 h1 {
-  font-size: 8rem;
-
+  font-size: 10rem;
   line-height: 0.1;
   color: var(--heading-color);
 }
@@ -395,7 +394,7 @@ ul {
 
     }
     .designer-title {
-      width: 50%;
+      width: 40%;
     }
   }
   .developer {
@@ -404,6 +403,7 @@ ul {
     .keyboard {
       width: 50%;
       position: absolute;
+      top: 22%;
       left: -100%;
       transition: all 2s ease;
       img {
@@ -412,9 +412,10 @@ ul {
     }
     .keyboard-active {
       left: -20%;
+      top: 22%;
     }
     .developer-title {
-      width: 50%;
+      width: 40%;
     }
   }
 
@@ -730,8 +731,8 @@ right: 14%;
     display: flex;
     justify-content: flex-start;
     min-width: 10%;
-    font-size: 20px;
-    font-family: $title-font;
+    font-size: 14px;
+    font-family: $subtitle-font;
     font-weight: 600;
     position: absolute;
     color: var(--paragraph-primary);
