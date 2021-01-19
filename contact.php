@@ -1,9 +1,9 @@
 
 <?php // Check if form was submitted
-if ($_POST['submit'] {
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $messsage = $_POST['message'];
+if(isset($_POST['submit'])) {
+  $name = trim(htmlspecialchars($_POST['name'], ENT_QUOTES));
+  $email = trim($_POST['email']);
+$messsage = trim(htmlspecialchars($_POST['message'], ENT_QUOTES));
 
   $mailTo = "arrianneoshea@hotmail.co.uk";
   $headers = "From: ".$email;
