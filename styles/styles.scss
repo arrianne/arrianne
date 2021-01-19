@@ -781,6 +781,18 @@ right: 14%;
 
 /////////////////////////////////////////////////////////
 ///// contact Form
+
+// .error{
+//   display: none;
+//   margin-left: 10px;
+// }
+//
+// .error_show {
+//   display: flex;
+//   color: red;
+//   margin-left: 10px;
+// }
+
 .contact {
     height: 550px;
     display: flex;
@@ -802,6 +814,19 @@ right: 14%;
 
   .form-container {
     width: 100%;
+
+    // error messages
+
+
+
+    input.invalid {
+    	border-bottom: 2px solid red;
+    }
+
+    input.valid {
+    	border-bottom: 2px solid green;
+    }
+
     fieldset {
       border: none;
       margin: 0;

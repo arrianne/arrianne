@@ -624,6 +624,12 @@ ul li {
 .contact .form-container {
   width: 100%;
 }
+.contact .form-container input.invalid {
+  border-bottom: 2px solid red;
+}
+.contact .form-container input.valid {
+  border-bottom: 2px solid green;
+}
 .contact .form-container fieldset {
   border: none;
   margin: 0;
