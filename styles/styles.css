@@ -100,9 +100,6 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
-.intro .lamp {
-  margin-bottom: 30px;
-}
 .intro .title {
   margin: 30px 0;
 }
@@ -606,7 +603,7 @@ ul li {
 }
 
 .contact {
-  height: 550px;
+  height: 50%;
   display: flex;
   background-color: var(--nav-color);
   display: flex;
@@ -674,6 +671,11 @@ ul li {
   color: var(--error-color);
 }
 .contact .form-container fieldset button {
+  position: relative;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
   padding: 10px 40px;
   color: var(--heading-color);
   background: transparent;
@@ -681,6 +683,45 @@ ul li {
   font-size: 14px;
   font-family: "Lato", sans-serif;
   margin-top: 35px;
+}
+.contact .form-container fieldset button:after,
+.contact .form-container fieldset button:before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0%;
+  visibility: hidden;
+}
+.contact .form-container fieldset button:after {
+  bottom: -3px;
+  right: -3px;
+  border-left: 3px solid var(--bg-color);
+  border-bottom: 3px solid var(--bg-color);
+  transition: width 0.1s ease 0.1s, height 0.1s ease, visibility 0s 0.2s;
+}
+.contact .form-container fieldset button::before {
+  top: -3px;
+  left: -3px;
+  border-top: 3px solid var(--bg-color);
+  border-right: 3px solid var(--bg-color);
+  transition: width 0.1s ease 0.3s, height 0.1s ease 0.2s, visibility 0s 0.4s;
+}
+.contact .form-container fieldset button:hover {
+  color: var(--heading-color);
+  animation: pulse 1s ease-out 0.4s;
+}
+.contact .form-container fieldset button:hover::after,
+.contact .form-container fieldset button:hover::before {
+  width: calc(100% + 3px);
+  height: calc(100% + 3px);
+  visibility: visible;
+  transition: width 0.1s ease 0.2s, height 0.1s ease 0.3s, visibility 0s 0.2s;
+}
+.contact .form-container fieldset button:hover::after {
+  transition: width 0.1s ease 0.2s, height 0.1s ease 0.3s, visibility 0s 0.2s;
+}
+.contact .form-container fieldset button:hover::before {
+  transition: width 0.1s ease, height 0.1s ease 0.1s;
 }
 
 @media screen and (max-width: 768px) {
@@ -806,6 +847,7 @@ ul li {
   .contact .contact-right fieldset {
     display: flex;
     justify-content: center;
+    flex-direction: column;
   }
 }
 
