@@ -12,6 +12,7 @@
   --paragraph-primary: #292922c4;
   --paragraph-secondary: #4ECDC4;
   --background: #57cac617;
+  --error-color: white;
 }
 
 [data-theme="dark"] {
@@ -22,6 +23,7 @@
   --burger-color: white;
   --paragraph-primary: #faf9ed59;
   --paragraph-secondary: white;
+  --error-color: #292922c4;
 }
 // $title-font: 'Mukta', sans-serif;
 
@@ -815,27 +817,17 @@ right: 14%;
   .form-container {
     width: 100%;
 
-    // error messages
-
-
-
-    input.invalid {
-    	border-bottom: 2px solid red;
-    }
-
-    input.valid {
-    	border-bottom: 2px solid green;
-    }
-
     fieldset {
       border: none;
       margin: 0;
       padding: 0;
+      height: 90px;
+
 
       input {
         width: 100%;
         padding: 15px 0;
-        margin-bottom: 20px;
+        margin-bottom: 5px;
         font-family: $title-font;
         font-size: 14px;
         background: transparent;
@@ -869,6 +861,12 @@ right: 14%;
         border-right: none;
         border-color: var(--heading-color);
       }
+
+      .error {
+
+        color: var(--error-color);
+      }
+
       button {
         padding: 10px 40px;
         color: var(--heading-color);

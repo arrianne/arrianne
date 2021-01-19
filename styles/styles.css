@@ -10,6 +10,7 @@
   --paragraph-primary: #292922c4;
   --paragraph-secondary: #4ECDC4;
   --background: #57cac617;
+  --error-color: white;
 }
 
 [data-theme=dark] {
@@ -20,6 +21,7 @@
   --burger-color: white;
   --paragraph-primary: #faf9ed59;
   --paragraph-secondary: white;
+  --error-color: #292922c4;
 }
 
 body,
@@ -624,21 +626,16 @@ ul li {
 .contact .form-container {
   width: 100%;
 }
-.contact .form-container input.invalid {
-  border-bottom: 2px solid red;
-}
-.contact .form-container input.valid {
-  border-bottom: 2px solid green;
-}
 .contact .form-container fieldset {
   border: none;
   margin: 0;
   padding: 0;
+  height: 90px;
 }
 .contact .form-container fieldset input {
   width: 100%;
   padding: 15px 0;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   font-family: "Lato", sans-serif;
   font-size: 14px;
   background: transparent;
@@ -672,6 +669,9 @@ ul li {
   border-left: none;
   border-right: none;
   border-color: var(--heading-color);
+}
+.contact .form-container fieldset .error {
+  color: var(--error-color);
 }
 .contact .form-container fieldset button {
   padding: 10px 40px;
