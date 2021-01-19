@@ -183,7 +183,7 @@ a:hover
 .line {
   width: 2px;
   height: 20px;
-  background: var(--heading-color);
+  // background: var(--heading-color);
   margin: 0 auto;
 }
 @keyframes slide {
@@ -332,7 +332,7 @@ ul {
       height: 5px;
       margin: 6px 0;
       transition: 0.4s;
-      background-color: var(--burger-color);
+      background: var(--heading-color)!important;
     }
   }
 }
@@ -487,10 +487,8 @@ transform: rotate(135deg);
 right: 14%;
 }
 
-
 .box {
   border: 5px solid white;
-  // animation: createBox .25s;
   animation-name: resize;
   animation-duration: 8s;
   animation-iteration-count: infinite;
@@ -524,23 +522,13 @@ right: 14%;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   .one {
-
     animation-delay: 1s;
-
   }
   .two {
-    // animation-name: dynamic;
-    // animation-duration: 3s;
-    // animation-iteration-count: infinite;
     animation-delay: 1.2;
-
   }
   .three {
-    // animation-name: dynamic;
-    // animation-duration: 3s;
-    // animation-iteration-count: infinite;
     animation-delay: 1.4;
-
   }
 }
 
@@ -562,18 +550,13 @@ right: 14%;
   0% {
     margin-left: -300px;
   }
-  // 50% {
-  //   right: 100px;
-  // }
 
   100% {
     margin-left: 300px;
   }
 }
 
-
 //////////////// skills
-
 
 .skills {
   display: flex;
@@ -623,8 +606,6 @@ right: 14%;
 
 }
 
-
-/*/
 //////////////// Section experience */
 
 .experience {
@@ -693,7 +674,6 @@ right: 14%;
 /////////////////////////////////////////////////////////
 ///// contact Form
 
-
 .contact {
     height: 50%;
     display: flex;
@@ -722,7 +702,6 @@ right: 14%;
       padding: 0;
       height: 90px;
 
-
       input {
         width: 100%;
         padding: 15px 0;
@@ -735,6 +714,7 @@ right: 14%;
         border-right: none;
         border-color: var(--heading-color);
       }
+
       ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
         color: var(--heading-color);
         opacity: 1; /* Firefox */
@@ -762,7 +742,6 @@ right: 14%;
       }
 
       .error {
-
         color: var(--error-color);
       }
 
@@ -788,7 +767,6 @@ right: 14%;
           height: 0%;
           visibility: hidden;
       }
-
       button:after {
           bottom: -3px;
           right: -3px;
@@ -796,7 +774,6 @@ right: 14%;
           border-bottom: 3px solid var(--bg-color);
           transition: width .1s ease .1s, height .1s ease, visibility 0s .2s;
       }
-
       button::before {
           top: -3px;
           left: -3px;
@@ -804,13 +781,11 @@ right: 14%;
           border-right: 3px solid var(--bg-color);
           transition: width .1s ease .3s, height .1s ease .2s, visibility 0s .4s;
       }
-
       button:hover {
           color: var(--heading-color);
           animation: pulse 1s ease-out .4s;
 
       }
-
       button:hover::after,
       button:hover::before {
           width: calc(100% + 3px);
@@ -818,11 +793,9 @@ right: 14%;
           visibility: visible;
           transition: width .1s ease .2s, height .1s ease .3s, visibility 0s .2s;
       }
-
       button:hover::after {
           transition: width .1s ease .2s, height .1s ease .3s, visibility 0s .2s;
       }
-
       button:hover::before {
           transition: width .1s ease, height .1s ease .1s;
       }
@@ -830,7 +803,6 @@ right: 14%;
     }
   }
 }
-
 
 ///////////////////////////////////////////////////////////////////////////////
 // Mobile

@@ -30,17 +30,13 @@ $(document).ready(function () {
   // Adding background to burger menu on scroll
   ////////////////////////////////////////////////////////////////////////////
     $(window).scroll(function(){
-
-
       	var scroll = $(window).scrollTop();
-
     	  if (scroll > 300) {
     	    $(".burger-menu_container").css("background" , "#36c9c6");
           $(".bar").css("background" , "white");
-
     	  } else{
     		  $(".burger-menu_container").css("background" , "none");
-          $(".bar").css("background" , "#34435e");
+          // $(".bar").css("background" , "#34435e");
     	  }
       });
 

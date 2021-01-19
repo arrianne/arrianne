@@ -162,7 +162,6 @@ a:hover {
 .line {
   width: 2px;
   height: 20px;
-  background: var(--heading-color);
   margin: 0 auto;
 }
 
@@ -305,7 +304,7 @@ ul li {
   height: 5px;
   margin: 6px 0;
   transition: 0.4s;
-  background-color: var(--burger-color);
+  background: var(--heading-color) !important;
 }
 
 .active .bar1 {
@@ -546,8 +545,6 @@ ul li {
   font-family: "Noto Serif", serif;
 }
 
-/*/
-//////////////// Section experience */
 .experience p {
   margin-top: 0;
   width: 100%;
