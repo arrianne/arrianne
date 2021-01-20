@@ -19,7 +19,7 @@
   --nav-color: #0C747A;
   --slider: white;
   --burger-color: white;
-  --paragraph-primary: #faf9ed59;
+  --paragraph-primary: #faf9edc7;
   --paragraph-secondary: white;
   --error-color: #292922c4;
 }
@@ -38,7 +38,7 @@ html {
 
 section {
   height: 100vh;
-  padding: 200px 100px;
+  padding: 100px 100px;
   margin: 0 auto;
   flex-direction: column;
 }
@@ -162,6 +162,7 @@ a:hover {
 .line {
   width: 2px;
   height: 20px;
+  background: var(--heading-color);
   margin: 0 auto;
 }
 
@@ -304,7 +305,7 @@ ul li {
   height: 5px;
   margin: 6px 0;
   transition: 0.4s;
-  background: var(--heading-color) !important;
+  background: var(--heading-color);
 }
 
 .active .bar1 {
@@ -371,7 +372,7 @@ ul li {
 }
 
 .services {
-  flex-direction: row;
+  flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -507,6 +508,7 @@ ul li {
 .skills {
   display: flex;
   align-items: center;
+  margin-top: 200px;
 }
 .skills .skills-container {
   display: flex;
@@ -556,6 +558,7 @@ ul li {
 }
 .experience__job .job-date {
   display: flex;
+  letter-spacing: 2px;
   justify-content: flex-start;
   min-width: 10%;
   font-size: 14px;
@@ -608,6 +611,9 @@ ul li {
   flex-direction: row;
   align-items: center;
 }
+.contact p {
+  color: var(--heading-color);
+}
 .contact .line-break {
   background-color: white;
 }
@@ -628,10 +634,18 @@ ul li {
 }
 .contact .form-container fieldset input {
   width: 100%;
-  padding: 15px 0;
+  padding: 15px 0 15px 15px;
   margin-bottom: 5px;
   font-family: "Lato", sans-serif;
   font-size: 14px;
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: var(--heading-color);
+}
+.contact .form-container fieldset input:focus {
+  outline: none;
   background: transparent;
   border-top: none;
   border-left: none;
@@ -654,15 +668,16 @@ ul li {
 }
 .contact .form-container fieldset textarea {
   width: 100%;
+  height: 100%;
   font-family: "Lato", sans-serif;
   color: var(--heading-color);
   font-size: 14px;
-  padding: 15px 0 0 0;
+  padding: 15px 0 15px 15px;
   background: transparent;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-color: var(--heading-color);
+  border: 2px solid var(--heading-color);
+}
+.contact .form-container fieldset textarea:focus {
+  outline: none;
 }
 .contact .form-container fieldset .error {
   color: var(--error-color);
@@ -679,7 +694,7 @@ ul li {
   border: 2px solid var(--heading-color);
   font-size: 14px;
   font-family: "Lato", sans-serif;
-  margin-top: 35px;
+  margin-top: 20%;
 }
 .contact .form-container fieldset button:after,
 .contact .form-container fieldset button:before {
@@ -804,9 +819,9 @@ ul li {
   }
   .experience .experience__job .job-date {
     left: 0;
-    top: 10px;
+    top: 0;
     transform: rotate(-90deg);
-    font-size: 16px;
+    font-size: 12px;
   }
   .experience .experience__job .job-circle-line {
     margin-left: 30px;
@@ -816,7 +831,7 @@ ul li {
   }
 
   .skills .skills-container {
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
   }
   .skills .skills-container .skills-list {
