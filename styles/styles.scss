@@ -652,6 +652,7 @@ right: 14%;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 0;
 
       .circle-inner {
         background-color: var(--nav-color);
@@ -660,6 +661,7 @@ right: 14%;
         border-radius: 50%;
         height: 20px;
         width: 20px;
+        padding: 0;
       }
     }
     .job-about {
@@ -934,7 +936,7 @@ right: 14%;
         }
         .keyboard-active {
           left: 0;
-          top: 100%;
+          top: 110%;
         }
       }
       .designer {
@@ -958,7 +960,7 @@ right: 14%;
       }
   }
   .experience {
-    min-height: 40em;
+    min-height: 80em;
     margin-bottom: 800px;
     .experience__job {
       .job-date {
@@ -976,7 +978,7 @@ right: 14%;
     }
   }
   .skills {
-    
+
     .skills-container {
       justify-content: space-between;
       width: 100%;
