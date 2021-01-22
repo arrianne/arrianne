@@ -13,11 +13,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<!-- <script src="js/form-validation.js"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script> -->
+
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.4.4.min.js"></script>
+ <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
+ <script src="js/form-validation.js"></script>
+
+
+
+
 
 
 
@@ -267,18 +271,18 @@
       <div class="form-container">
         <form id="contact-form" name="contact-form" method="POST">
           <fieldset>
-            <input placeholder="Your name" name="name" id="name" type="text" tabindex="1" required autofocus>
+            <input placeholder="Your name" name="name" id="name" type="text">
           </fieldset>
           <fieldset>
-            <input placeholder="Your Email Address" name="_replyto" id="email" type="email" tabindex="2" required>
+            <input placeholder="Your Email Address" name="email" id="email" type="email">
           </fieldset>
           <fieldset>
-            <textarea placeholder="Type your message here...." name="message" id="message" tabindex="5" required></textarea>
+            <textarea placeholder="Type your message here...." name="message" id="message"></textarea>
           </fieldset>
           <p id="my-form-status"></p>
 
           <fieldset>
-            <button name="submit" type="submit" id="contact-submit" value="send" data-submit="...Sending">Submit</button>
+            <button name="submit" type="submit" id="submit" value="submit">Submit</button>
           </fieldset>
           <div id="thankyouBlock" style="display:none">
         		<p>
