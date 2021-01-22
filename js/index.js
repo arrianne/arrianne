@@ -143,13 +143,13 @@ $(document).ready(function () {
 
     		//send to formspree
     		$.ajax({
-    			url:'https://formspree.io/arrianneoshea@hotmail.co.uk',
+    			url:'https://formspree.io/f/mrgojpqk',
     			method:'POST',
     			data:{
     				name:name,
     				_replyto:email,
-    				 email:email,
-    				comments:comments,
+    				email:email,
+    				message:message,
     				_subject:'My Form Submission',
     			},
     			dataType:"json",
