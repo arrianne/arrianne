@@ -7,9 +7,7 @@ $(document).ready(function () {
       name: "required",
       email: {
         required: true,
-        // Specify that email should be validated
-        // by the built-in "email" rule
-        email: true
+        email: true 
       },
       message: {
         required: true,
@@ -18,19 +16,13 @@ $(document).ready(function () {
     },
     // Specify validation error messages
     messages: {
-      name: "You've got a name right?",
-      email: "please enter a valid email.",
-      message: "Would love to hear what you have to say.",
+      name: "You have a name right?",
+      email: "Hmm that doesn't seem to be a valid email address",
+      message: "What's on your mind?",
     },
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
     submitHandler: function(form) {
-      // //get the name field value
-      // var name = $('#name').val();
-      // //get the name field value
-      // var email = $('#email').val();
-      // //get the comments
-      // var message = $('#message').val();
 
       $.ajax({
         url:'https://formspree.io/f/mrgojpqk',

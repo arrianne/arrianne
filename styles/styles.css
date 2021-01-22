@@ -10,7 +10,7 @@
   --paragraph-primary: #292922c4;
   --paragraph-secondary: #4ECDC4;
   --background: #57cac617;
-  --error-color: white;
+  --error-color: #f56079;
 }
 
 [data-theme=dark] {
@@ -21,7 +21,7 @@
   --burger-color: white;
   --paragraph-primary: #faf9edc7;
   --paragraph-secondary: white;
-  --error-color: #292922c4;
+  --error-color: #f1b6c0;
 }
 
 body,
@@ -333,6 +333,7 @@ ul li {
 }
 .profile .designer {
   justify-content: flex-start;
+  margin-bottom: 50px;
 }
 .profile .designer .pen {
   width: 50%;
@@ -374,8 +375,10 @@ ul li {
 .services {
   flex-direction: column;
   display: flex;
-  align-items: center;
+  height: 100%;
+  min-height: 60em;
   justify-content: center;
+  align-items: center;
 }
 
 .icon-container {
@@ -507,8 +510,10 @@ ul li {
 }
 .skills {
   display: flex;
+  height: 100%;
+  min-height: 60em;
+  justify-content: center;
   align-items: center;
-  margin-top: 200px;
 }
 .skills .skills-container {
   display: flex;
@@ -520,7 +525,7 @@ ul li {
   display: flex;
   align-items: flex-end;
   width: 40px;
-  height: 500px;
+  height: 400px;
   margin: 0 20px;
   border: 1px solid var(--heading-color);
 }
@@ -547,6 +552,9 @@ ul li {
   font-family: "Noto Serif", serif;
 }
 
+.experience {
+  min-height: 60em;
+}
 .experience p {
   margin-top: 0;
   width: 100%;
@@ -561,7 +569,7 @@ ul li {
   letter-spacing: 2px;
   justify-content: flex-start;
   min-width: 10%;
-  font-size: 14px;
+  font-size: 0.8rem;
   font-family: "Noto Serif", serif;
   font-weight: 600;
   position: absolute;
@@ -679,9 +687,6 @@ ul li {
 .contact .form-container fieldset textarea:focus {
   outline: none;
 }
-.contact .form-container fieldset .error {
-  color: var(--error-color);
-}
 .contact .form-container fieldset button {
   position: relative;
   cursor: pointer;
@@ -694,7 +699,7 @@ ul li {
   border: 2px solid var(--heading-color);
   font-size: 14px;
   font-family: "Lato", sans-serif;
-  margin-top: 20%;
+  margin-top: 60px;
 }
 .contact .form-container fieldset button:after,
 .contact .form-container fieldset button:before {
@@ -735,6 +740,18 @@ ul li {
 .contact .form-container fieldset button:hover::before {
   transition: width 0.1s ease, height 0.1s ease 0.1s;
 }
+.contact .form-container fieldset button:focus {
+  outline: none;
+  box-shadow: none;
+}
+.contact .form-container label.error {
+  font-size: 12px;
+  padding-left: 15px;
+  color: var(--error-color);
+}
+.contact .form-container #thankyouBlock p {
+  color: white;
+}
 
 @media screen and (max-width: 768px) {
   .title h1 {
@@ -760,7 +777,7 @@ ul li {
   }
 
   .services {
-    margin-bottom: 500px;
+    min-height: 100em;
     flex-direction: column;
   }
   .services .icon-container {
@@ -796,7 +813,7 @@ ul li {
   }
   .profile .developer .keyboard-active {
     left: 0;
-    top: 90%;
+    top: 100%;
   }
   .profile .designer {
     flex-direction: column;
@@ -815,6 +832,7 @@ ul li {
   }
 
   .experience {
+    min-height: 40em;
     margin-bottom: 800px;
   }
   .experience .experience__job .job-date {
@@ -860,6 +878,10 @@ ul li {
     display: flex;
     justify-content: center;
     flex-direction: column;
+  }
+  .contact .contact-right button {
+    width: 50%;
+    margin: 0 auto;
   }
 }
 
