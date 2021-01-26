@@ -57,7 +57,7 @@ $(document).ready(function () {
 
     function anchorScroll() {
       $('.menu-link').click(function(){
-        // $(".header").toggleClass('active');
+        $(".burger-menu").toggleClass('active');
         $(".header").toggleClass("header-active");
 
         $('html, body').stop().animate({

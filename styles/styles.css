@@ -815,7 +815,7 @@ ul li {
   }
   .profile .developer .keyboard-active {
     left: 0;
-    top: 100%;
+    top: 110%;
   }
   .profile .designer {
     flex-direction: column;
