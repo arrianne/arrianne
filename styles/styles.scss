@@ -685,10 +685,10 @@ right: 14%;
 
 .contact {
     height: 50%;
+    justify-content: space-between;
     display: flex;
     background-color: var(--nav-color);
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
     align-items: center;
 
@@ -767,7 +767,7 @@ right: 14%;
 
 
       button {
-         position: relative;
+
          cursor: pointer;
          transition: ease-out 0.5s;
          -webkit-transition: ease-out 0.5s;
@@ -998,6 +998,8 @@ right: 14%;
     }
   }
   .contact {
+    height: 100vh;
+    justify-content:center;
     flex-direction: column;
     .contact-left {
       width: 100%;
@@ -1008,6 +1010,7 @@ right: 14%;
         display: flex;
         justify-content: center;
         flex-direction: column;
+        align-items: center;
       }
       button {
             width: 50%;

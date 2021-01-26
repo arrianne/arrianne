@@ -614,10 +614,10 @@ ul li {
 
 .contact {
   height: 50%;
+  justify-content: space-between;
   display: flex;
   background-color: var(--nav-color);
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
   align-items: center;
 }
@@ -690,7 +690,6 @@ ul li {
   outline: none;
 }
 .contact .form-container fieldset button {
-  position: relative;
   cursor: pointer;
   transition: ease-out 0.5s;
   -webkit-transition: ease-out 0.5s;
@@ -868,6 +867,8 @@ ul li {
   }
 
   .contact {
+    height: 100vh;
+    justify-content: center;
     flex-direction: column;
   }
   .contact .contact-left {
@@ -880,6 +881,7 @@ ul li {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
   }
   .contact .contact-right button {
     width: 50%;
