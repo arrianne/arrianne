@@ -32,6 +32,8 @@ html {
   width: auto;
   height: auto;
   min-height: 100%;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
   padding: 0;
   font-family: "Lato", sans-serif;
   background-color: var(--bg-color);
