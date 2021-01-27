@@ -38,7 +38,8 @@ html {
   margin: 0;
   overflow-x: hidden;
   position: relative;
-  width: auto;
+  max-width: 100%;
+  overflow-x: hidden;
   height: auto;
   min-height: 100%;
   /* mobile viewport bug fix */
