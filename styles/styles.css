@@ -29,7 +29,8 @@ html {
   margin: 0;
   overflow-x: hidden;
   position: relative;
-  width: auto;
+  max-width: 100%;
+  overflow-x: hidden;
   height: auto;
   min-height: 100%;
   /* mobile viewport bug fix */
@@ -633,6 +634,7 @@ ul li {
 }
 .contact .contact-left {
   width: 45%;
+  height: 400px;
 }
 .contact .contact-right {
   width: 45%;
@@ -651,7 +653,6 @@ ul li {
   border: none;
   margin: 0;
   padding: 0;
-  height: 90px;
 }
 .contact .form-container fieldset input {
   width: 100%;
@@ -700,7 +701,19 @@ ul li {
 .contact .form-container fieldset textarea:focus {
   outline: none;
 }
-.contact .form-container fieldset button {
+.contact .form-container .input-area {
+  height: 20%;
+}
+.contact .form-container .text-area {
+  height: 30%;
+  margin-top: 20px;
+}
+.contact .form-container .button-area {
+  height: 20%;
+  display: flex;
+  align-items: center;
+}
+.contact .form-container button {
   cursor: pointer;
   transition: ease-out 0.5s;
   -webkit-transition: ease-out 0.5s;
@@ -711,13 +724,16 @@ ul li {
   border: 2px solid var(--heading-color);
   font-size: 14px;
   font-family: "Lato", sans-serif;
-  margin: 30px 0px;
+  margin-top: 50px;
+  width: 50%;
+  height: 10%;
+  min-height: 50px;
 }
-.contact .form-container fieldset button:hover {
+.contact .form-container button:hover {
   color: var(--nav-color);
   background: white;
 }
-.contact .form-container fieldset button:focus {
+.contact .form-container button:focus {
   outline: none;
   box-shadow: none;
 }
@@ -845,9 +861,11 @@ ul li {
   .contact {
     justify-content: center;
     flex-direction: column;
+    min-height: 900px;
   }
   .contact .contact-left {
     width: 100%;
+    height: 300px;
   }
   .contact .contact-right {
     width: 100%;
