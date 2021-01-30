@@ -333,7 +333,6 @@ ul li {
 .profile .profile-container {
   display: flex;
   flex-direction: row;
-  height: 500px;
   align-items: center;
 }
 .profile .designer {
@@ -375,6 +374,7 @@ ul li {
 }
 .profile .developer .developer-title {
   width: 40%;
+  margin-top: 92px;
 }
 
 .services {
@@ -419,35 +419,10 @@ ul li {
   position: absolute;
   border-radius: 50%;
   border: 5px solid white;
-}
-
-.intuitive-line {
-  width: 20px;
-  height: 5px;
-  top: 50px;
-  border-radius: 25px;
-  margin: 10px;
-  position: absolute;
-  background-color: white;
   animation-name: intuitive;
   animation-timing-function: ease-out;
   animation-duration: 1s;
   animation-iteration-count: infinite;
-}
-
-.intuitive-line.one {
-  transform: rotate(45deg);
-  left: 14%;
-}
-
-.intuitive-line.two {
-  transform: rotate(90deg);
-  top: 14%;
-}
-
-.intuitive-line.three {
-  transform: rotate(135deg);
-  right: 14%;
 }
 
 .box {
@@ -496,13 +471,16 @@ ul li {
 
 @keyframes intuitive {
   0% {
-    margin: 15px;
+    width: 30%;
+    height: 30%;
   }
   50% {
-    margin: 12px;
+    width: 35%;
+    height: 35%;
   }
   100% {
-    margin: 15px;
+    width: 30%;
+    height: 30%;
   }
 }
 @keyframes dynamic {
@@ -784,7 +762,7 @@ ul li {
   }
 
   .profile {
-    margin-bottom: 500px;
+    margin-bottom: 200px;
   }
   .profile .developer {
     flex-direction: column;
@@ -795,11 +773,12 @@ ul li {
   }
   .profile .developer .developer-title {
     width: 100%;
+    margin-top: 0;
   }
   .profile .developer .keyboard {
     position: absolute;
     width: 100%;
-    top: 90%;
+    top: 110%;
   }
   .profile .developer .keyboard img {
     width: 100%;
@@ -824,10 +803,6 @@ ul li {
     width: 100%;
   }
 
-  .experience {
-    min-height: 80em;
-    margin-bottom: 800px;
-  }
   .experience .experience__job .job-date {
     left: 0;
     top: 0;

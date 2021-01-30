@@ -107,6 +107,25 @@ a:hover
   background-color: var(--nav-color);
 }
 
+// working on page divider
+// .zigzag {
+//   position: relative;
+// }
+//
+// .zigzag::after {
+//   content: '';
+//   position: absolute;
+//   right: 0;
+//   left: -0%;
+//   top: 100%;
+//   z-index: 10;
+//   display: block;
+//   height: 100px;
+//   background-size: 100px 100%;
+//   background-image: linear-gradient(135deg, #2c3e50 25%, transparent 25%), linear-gradient(225deg, #2c3e50 25%, transparent 25%);
+//   background-position: 0 0;
+// }
+
 /*/
 //////////// Title */
 
@@ -368,7 +387,7 @@ ul {
   .profile-container {
     display: flex;
     flex-direction: row;
-    height: 500px;
+
     align-items: center;
   }
   .designer {
@@ -411,9 +430,9 @@ ul {
     }
     .developer-title {
       width: 40%;
+      margin-top: 92px;
     }
   }
-
 }
 
 
@@ -466,34 +485,12 @@ ul {
   position: absolute;
   border-radius: 50%;
   border: 5px solid white;
-}
-
-.intuitive-line {
-  width: 20px;
-  height: 5px;
-  top: 50px;
-  border-radius: 25px;
-  margin: 10px;
-  position: absolute;
-  background-color: white;
   animation-name: intuitive;
   animation-timing-function: ease-out;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
 
-.intuitive-line.one {
-  transform: rotate(45deg);
-  left: 14%;
-}
-.intuitive-line.two {
-  transform: rotate(90deg);
-  top: 14%;
-}
-.intuitive-line.three {
-transform: rotate(135deg);
-right: 14%;
-}
 
 .box {
   border: 5px solid white;
@@ -543,14 +540,17 @@ right: 14%;
 @keyframes intuitive {
   0% {
 
-    margin: 15px;
+    width: 30%;
+    height: 30%;
   }
   50% {
-    margin: 12px;
+    width: 35%;
+    height: 35%;
   }
 
   100% {
-    margin: 15px;
+    width: 30%;
+    height: 30%;
   }
 }
 
@@ -908,7 +908,7 @@ align-items: center;
 
   }
   .profile {
-    margin-bottom: 500px;
+    margin-bottom: 200px;
 
       .developer {
         flex-direction: column;
@@ -919,12 +919,14 @@ align-items: center;
 
         .developer-title {
           width: 100%;
+          margin-top: 0;
+
         }
 
         .keyboard {
           position: absolute;
           width: 100%;
-          top: 90%;
+          top: 110%;
 
           img {
             width: 100%;
@@ -957,8 +959,7 @@ align-items: center;
       }
   }
   .experience {
-    min-height: 80em;
-    margin-bottom: 800px;
+
     .experience__job {
       .job-date {
         left: 0;
@@ -990,7 +991,6 @@ align-items: center;
       .skill-name {
         font-size: 12px;
         margin: 0 5px;
-
       }
     }
   }
@@ -1014,8 +1014,8 @@ align-items: center;
         margin-top: 30px;
       }
       button {
-            width: 50%;
-            margin: 0 auto;
+        width: 50%;
+        margin: 0 auto;
       }
     }
   }
